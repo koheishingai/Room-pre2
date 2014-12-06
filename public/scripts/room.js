@@ -60,7 +60,14 @@ this.room = this.room || {};
     room.init();
 
     room.close = function() {
-      
+        if (bradev.browser !== "safari" && bradev.device === "other") {
+            room.$body.removeClass("view2");
+        } else {
+            room.$body.removeClass("view").removeClass("view2").removeClass("mobile");;
+        }
+        setTimeout(function() {
+            room.$body.removeClass("view")
+        }, 280);      
     };
 
     room.back = function() {
