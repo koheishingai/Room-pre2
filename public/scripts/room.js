@@ -12,7 +12,7 @@ this.room = this.room || {};
     room.root_name = $("html").attr("name");
 
     room.hideSafari = function(){
-      if (bradev.browser === "safari" && bradev.device !== "other") {
+      if (bradev.browser === "safari" || bradev.device !== "other") {
         room.$hide_safari.hide();
       }
     };
