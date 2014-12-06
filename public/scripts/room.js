@@ -6,9 +6,16 @@ this.room = this.room || {};
     room.$styles = $('.styles');
     room.$title = $('title');
     room.$body = $('body');
+    room.$hide_safari = $('.hide-safari');
     
     room.space_path = "./room/space/";
     room.root_name = $("html").attr("name");
+
+    room.hideSafari = function(){
+      if (bradev.browser === "safari" && bradev.device !== "other") {
+        room.$hide_safari.hide();
+      }
+    };
 
     room.getTime = function(){
       var t = new Date();
@@ -46,6 +53,7 @@ this.room = this.room || {};
     };
 
     room.init = function() {
+      room.hideSafari();
       room.getSpace();
     };
 
