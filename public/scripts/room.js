@@ -18,15 +18,40 @@ this.room = this.room || {};
     room.root_name = $("html").attr("name");
     room.explain_start = "<div class='bg-content text explain'>";
     room.explain_end = "</div>";
+    room.layout_loader = '<div class="screen loader"><img src="./images/load.svg"></div>';
     room.mode = "main";
+
+    room.getLayout = function(f, id){
+      $.ajax({
+        url: "/getLayout?" + f + "?" + id,
+        cache: false,
+        success: function(data) {
+          room.$layout.html(data);
+          $('.screen.layer.layout .loader').fadeOut();
+        }
+      });
+    };
+
+    room.createId = function(num){
+      var str = '';
+      var mojishu = 'ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz0123456789';
+      var len = mojishu.length;
+      for (var i = 0; i < num; i++) {
+        var rand = parseInt(Math.random()*len);
+        str += mojishu.charAt(rand);
+      }
+      return str;
+      localStorage.setItem("ID", str);
+    }
     
     room.removeExplain = function(){
       $('.explain').remove();
     };
 
-    room.addExplain = function(){
+    room.refreshExplain = function(){
       room.$room.append(room.explain_start+"This is Room"+room.explain_end);
-      room.$layout.append(room.explain_start+"This is Layout"+room.explain_end);
+      room.$layout.html(room.explain_start+"This is Layout"+room.explain_end);
+      room.$layout.append('<div class="screen loader"><img src="./images/load.svg"></div>');
     };
 
     room.hideSafari = function(){
@@ -90,8 +115,11 @@ this.room = this.room || {};
               room.mode = "main";
           }, 280);      
         }else if(room.mode === "layout"){
+          $('.screen.layer.layout .loader').fadeOut();
+          $('.layer.layout .explain').text("This is Layout");
           room.$body.removeClass("layout2");
           setTimeout(function() {
+              room.refreshExplain();
               room.$body.removeClass("layout");
               room.mode = "view";
           }, 280);        
@@ -105,7 +133,7 @@ this.room = this.room || {};
     room.view = function() {
         room.mode = "view";
         if (bradev.browser !== "safari" && bradev.device === "other") {
-            room.addExplain();
+            room.refreshExplain();
             room.$body.addClass("view");
         } else {
             room.$body.addClass("view").addClass("mobile");
@@ -117,6 +145,15 @@ this.room = this.room || {};
     
     room.layout = function(f) {
       room.mode = "layout";
+      $('.screen.layer.layout .loader').fadeIn();
+      if(f === "create"){
+        $('.layer.layout .explain').text("Create Room");
+        room.getLayout(f, room.createId(7));
+      }else if(f === "manage"){
+        $('.layer.layout .explain').text("Manage Room");
+      }else if(f === "what"){
+        $('.layer.layout .explain').text("What's Room?");
+      }
       room.$body.addClass("layout");
       setTimeout(function() {
     　　　room.$body.addClass("layout2");
