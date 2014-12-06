@@ -256,6 +256,38 @@ body.view2 .bg-content {
   opacity: 1 !important;
 }
 
+/* Layout Frame-1 */
+body.layout .screen.layer.layout {
+    transform: perspective(6000px) translateZ(-6000px)rotateX(51deg) rotateY(20deg) rotateZ(-50deg) translateX(180px) translateY(-120px);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+body.layout .screen.layer.room {
+    transform: perspective(6000px) translateZ(-6000px)rotateX(51deg) rotateY(20deg) rotateZ(-50deg) translateX(55px) translateY(-27px);
+    z-index: 1;
+}
+
+body.layout.mobile .screen.layer {
+    transform-style: flat;
+    transform: translateY(0%);
+}
+
+/* Layout Frame-2 */
+body.layout2 .screen.layer{
+    transform: perspective(6000px) translateZ(0px) !important;
+}
+
+body.layout2 .bg-content {
+  display: none;
+  opacity: 0 !important;
+}
+
+body.layout2 .bg-content.button.side.close {
+  display: block;
+  opacity: 1 !important;
+}
+
 /* [Resize] */
 @media (max-width: 580px) {
     .button.side.view {

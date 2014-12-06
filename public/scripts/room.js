@@ -18,6 +18,7 @@ this.room = this.room || {};
     room.root_name = $("html").attr("name");
     room.explain_start = "<div class='bg-content text explain'>";
     room.explain_end = "</div>";
+    room.mode = "main";
     
     room.removeExplain = function(){
       $('.explain').remove();
@@ -77,15 +78,24 @@ this.room = this.room || {};
     room.init();
 
     room.close = function() {
-        if (bradev.browser !== "safari" && bradev.device === "other") {
-            room.$body.removeClass("view2");
-        } else {
-            room.$body.removeClass("view").removeClass("view2").removeClass("mobile");;
+        if(room.mode === "view"){
+          if (bradev.browser !== "safari" && bradev.device === "other") {
+              room.$body.removeClass("view2");
+          } else {
+              room.$body.removeClass("view").removeClass("view2").removeClass("mobile");;
+          }
+          setTimeout(function() {
+              room.removeExplain();
+              room.$body.removeClass("view");
+              room.mode = "main";
+          }, 280);      
+        }else if(room.mode === "layout"){
+          room.$body.removeClass("layout2");
+          setTimeout(function() {
+              room.$body.removeClass("layout");
+              room.mode = "view";
+          }, 280);        
         }
-        setTimeout(function() {
-            room.removeExplain();
-            room.$body.removeClass("view")
-        }, 280);      
     };
 
     room.back = function() {
@@ -93,6 +103,7 @@ this.room = this.room || {};
     };
     
     room.view = function() {
+        room.mode = "view";
         if (bradev.browser !== "safari" && bradev.device === "other") {
             room.addExplain();
             room.$body.addClass("view");
@@ -104,8 +115,12 @@ this.room = this.room || {};
         }, 280);
     };
     
-    room.edit = function() {
-    
+    room.layout = function(f) {
+      room.mode = "layout";
+      room.$body.addClass("layout");
+      setTimeout(function() {
+    　　　room.$body.addClass("layout2");
+      }, 280);    
     };
 
 }(this.room));
