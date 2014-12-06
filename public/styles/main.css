@@ -155,12 +155,17 @@ box-shadow: none;
 }
 
 .button.center.manage {
-margin-top: 2px;
+margin-top: -26px;
 }
 
 .button.center.create {
-margin-top: -52px;
+margin-top: -79px;
 }
+
+.button.center.what {
+margin-top: 27px;
+}
+
 
 /* Side Button */
 .button.side{
