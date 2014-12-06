@@ -2,14 +2,31 @@ this.room = this.room || {};
 (function(room) {
     'Use Strict'
 
+    // [Environment]
     room.$favicon = $('.favicon');
     room.$styles = $('.styles');
     room.$title = $('title');
     room.$body = $('body');
     room.$hide_safari = $('.hide-safari');
+
+    // [Object]
+    room.$room = $('.screen.layer.room');
+    room.$layout = $('.screen.layer.layout');
     
+    // [Var]
     room.space_path = "./room/space/";
     room.root_name = $("html").attr("name");
+    room.explain_start = "<div class='bg-content text explain'>";
+    room.explain_end = "</div>";
+    
+    room.removeExplain = function(){
+      $('.explain').remove();
+    };
+
+    room.addExplain = function(){
+      room.$room.append(room.explain_start+"This is Room"+room.explain_end);
+      room.$layout.append(room.explain_start+"This is Layout"+room.explain_end);
+    };
 
     room.hideSafari = function(){
       if (bradev.browser === "safari" || bradev.device !== "other") {
@@ -66,6 +83,7 @@ this.room = this.room || {};
             room.$body.removeClass("view").removeClass("view2").removeClass("mobile");;
         }
         setTimeout(function() {
+            room.removeExplain();
             room.$body.removeClass("view")
         }, 280);      
     };
@@ -76,6 +94,7 @@ this.room = this.room || {};
     
     room.view = function() {
         if (bradev.browser !== "safari" && bradev.device === "other") {
+            room.addExplain();
             room.$body.addClass("view");
         } else {
             room.$body.addClass("view").addClass("mobile");
