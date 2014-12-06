@@ -146,7 +146,7 @@ top: 50%;
 font-family: inherit;
 text-align: center;
 font-weight: 100;
-color: #888888;
+color: #747474;
 background: #fff;
 line-height: 46px;
 font-size: 25px;
@@ -186,7 +186,7 @@ margin-top: -52px;
 /* Button: Hover */
 .button:hover {
     background: rgba(236, 236, 236, 0.5);
-    color: #CBCBCB;
+    color: #747474;
 }
 
 /* - Side Button > SVG Image */
