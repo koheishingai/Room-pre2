@@ -22,6 +22,7 @@ this.room = this.room || {};
     room.mode = "main";
 
     room.getLayout = function(f, id){
+      alert(bradev.device);
       $.ajax({
         url: "/getLayout?" + f + "?" + id,
         cache: false,
