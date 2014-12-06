@@ -132,33 +132,40 @@ body {
   position: fixed;
   cursor: pointer;
   transition: opacity 0.18s 0.1s ease-in-out, background 0.2s ease-in-out;
+  right: 4px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.38), inset 0px 0px 1px rgba(0, 0, 0, 0.35);
+  z-index: 3;
 }
 
 /* Edit Button */
+.button.center {
+width: 180px;
+height: 48px;
+top: 50%;
+font-family: inherit;
+text-align: center;
+font-weight: 100;
+color: #C8C8C8;
+background: #fff;
+line-height: 46px;
+font-size: 25px;
+border: 1px solid #DBDBDB;
+box-shadow: none;
+}
 
-.button.edit {
-    width: 165px;
-    height: 48px;
-    right: 6px;
-    top: 50%;
-    margin-top: -25px;
-    font-family: inherit;
-    text-align: center;
-    font-weight: 100;
-    color: #8E8E8E;
-    border: 1px solid #B5B5B5;
-    line-height: 46px;
-    font-size: 25px;
+.button.center.manage {
+margin-top: 2px;
+}
+
+.button.center.create {
+margin-top: -52px;
 }
 
 /* Side Button */
 .button.side{
     width: 48px;
     height: 48px;
-    right: 4px;
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.38), inset 0px 0px 1px rgba(0, 0, 0, 0.35);
-    z-index: 3;
 }
 
 .button.side.close {
@@ -176,9 +183,10 @@ body {
     bottom: 4px;
 }
 
-/* Side Button: Hover */
-.button.side:hover {
-    background: rgba(236, 236, 236, 0.98);
+/* Button: Hover */
+.button:hover {
+    background: rgba(236, 236, 236, 0.5);
+    color: #CBCBCB;
 }
 
 /* - Side Button > SVG Image */
