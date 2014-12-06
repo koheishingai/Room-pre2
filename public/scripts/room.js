@@ -22,9 +22,13 @@ this.room = this.room || {};
     room.mode = "main";
 
     room.getLayout = function(f, id){
-      alert(bradev.device);
+      if(bradev.device === "iphone"){
+        var d = "iphone";
+      }else{
+        var d = "other";
+      }
       $.ajax({
-        url: "/getLayout?" + f + "?" + id,
+        url: "/getLayout?" + f + "_" + d + "?" + id,
         cache: false,
         success: function(data) {
           room.$layout.html(data);
