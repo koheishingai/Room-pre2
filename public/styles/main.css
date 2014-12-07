@@ -361,3 +361,16 @@ left: 7px;
 .prepare:hover{
 background: #fff !important;
 }
+
+.partial-load{
+  width: 100%;
+  height: 100%;
+}
+
+.partial-load img{
+position: absolute;
+top: 50%;
+left: 50%;
+margin-top: -16px;
+margin-left: -16px;
+}
