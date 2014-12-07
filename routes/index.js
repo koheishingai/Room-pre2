@@ -23,10 +23,17 @@ exports.getLayout = function(req, res) {
   var gl = {};
   gl.list = req.url.split("?");
   gl.flg = gl.list[1];
-  gl.id = gl.list[2].split("&_=")[0];
-  fs.readFile(index.layout_path+gl.flg+"/layout.html", 'utf8', function(err, val) {
-    res.send(val);
-  });
+  gl.lang = gl.list[2]
+  gl.id = gl.list[3].split("&_=")[0];
+  if(gl.lang === "ja"){
+    fs.readFile(index.layout_path+gl.flg+"/layout_ja.html", 'utf8', function(err, val) {
+      res.send(val);
+    });
+  }else{
+    fs.readFile(index.layout_path+gl.flg+"/layout_en.html", 'utf8', function(err, val) {
+      res.send(val);
+    });  
+  }
   fs.readFile(index.layout_path+gl.flg+"user.json", 'utf8', function(err, val) {
     console.log(val);
   });

@@ -31,7 +31,7 @@ this.room = this.room || {};
         var d = "other";
       }
       $.ajax({
-        url: "/getLayout?" + f + "_" + d + "?" + id,
+        url: "/getLayout?" + f + "_" + d + "?" + room.getLang() +"?" + id,
         cache: false,
         success: function(data) {
           room.$layout.html(data);
@@ -197,6 +197,7 @@ this.room = this.room || {};
         }else{
           $('.layer.layout .explain').text("部屋について");
         }
+        room.getLayout(f, room.createId(7));
       }
       room.$body.addClass("layout");
       setTimeout(function() {
