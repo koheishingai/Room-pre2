@@ -89,6 +89,40 @@ top: 88px;
 padding: 30px;
 }
 
+.screen.layout .content.mobile.create {
+padding: 20px;
+height: calc(100% - 136px);
+}
+
+.screen.layout .content.mobile.create .code {
+width: calc(100% - 40px);
+font-family: inherit;
+background: #FAFAFA;
+border: 1px solid rgb(226, 226, 226);
+font-size: 30px;
+top: 50%;
+position: fixed;
+margin-top: 0px;
+font-weight: 100;
+text-align: center;
+color: rgb(166, 166, 166);
+outline: none;
+line-height: 43px;
+height: 43px;
+}
+
+.screen.layout .content.mobile.create .code{
+  font-size: 16px;
+}
+
+.screen.layout .content.mobile.create .auth {
+position: fixed;
+top: auto;
+bottom: 20px;
+left: 50%;
+margin-left: -90px;
+}
+
 .screen.layout .content.movie iframe{
   width: 100%;
   height: 100%;
