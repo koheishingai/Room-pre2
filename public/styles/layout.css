@@ -198,3 +198,9 @@ width: 100%;
 top: 155px;
 }
 }
+
+@media (max-height: 460px) {
+  .content.mobile{
+    display: none !important;
+  }
+}
