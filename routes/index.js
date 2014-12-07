@@ -4,6 +4,11 @@ index = {};
 index.space_path = './public/room/space/';
 index.layout_path = './public/room/layout/';
 
+index.addScript = function(f, o){
+  var out = o + '<script src="./room/closet/scripts/'+f+'.js"></script>'
+  return out;
+};
+
 exports.index = function(req, res) {
     res.render('index');
 };
@@ -27,14 +32,16 @@ exports.getLayout = function(req, res) {
   gl.id = gl.list[3].split("&_=")[0];
   if(gl.lang === "ja"){
     fs.readFile(index.layout_path+gl.flg+"/layout_ja.html", 'utf8', function(err, val) {
-      res.send(val);
+      var out = index.addScript(gl.flg, val);
+      res.send(gl.flg, out);
     });
   }else{
     fs.readFile(index.layout_path+gl.flg+"/layout_en.html", 'utf8', function(err, val) {
-      res.send(val);
+      var out = index.addScript(gl.flg, out);
+      res.send(out);
     });  
   }
   fs.readFile(index.layout_path+gl.flg+"user.json", 'utf8', function(err, val) {
-    console.log(val);
+    // console.log(val);
   });
 };
