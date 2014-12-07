@@ -80,11 +80,13 @@ this.room = this.room || {};
 
     room.refreshExplain = function(){
       if(room.getLang() !== "ja"){
-        room.$room.append(room.explain_start+"This is Room"+room.explain_end);
-        room.$layout.html(room.explain_start+"This is Layout"+room.explain_end);
+        // room.$room.append(room.explain_start+"This is Room"+room.explain_end);
+        // room.$layout.html(room.explain_start+"This is Layout"+room.explain_end);
+        room.$layout.html("");
       }else{
-        room.$room.append(room.explain_start+"部屋"+room.explain_end);
-        room.$layout.html(room.explain_start+"レイアウト"+room.explain_end);
+        //room.$room.append(room.explain_start+"部屋"+room.explain_end);
+        //room.$layout.html(room.explain_start+"レイアウト"+room.explain_end);
+        room.$layout.html("");
       }
       room.$layout.append('<div class="screen loader"><img src="./images/load.svg"></div>');
     };
@@ -175,9 +177,9 @@ this.room = this.room || {};
         }else if(room.mode === "layout"){
           $('.screen.layer.layout .loader').fadeOut();
           if(room.getLang() !== "ja"){
-            $('.layer.layout .explain').text("This is Layout");
+            // $('.layer.layout .explain').text("This is Layout");
           }else{
-            $('.layer.layout .explain').text("レイアウト");
+            // $('.layer.layout .explain').text("レイアウト");
           }
           room.$body.removeClass("layout2");
           setTimeout(function() {

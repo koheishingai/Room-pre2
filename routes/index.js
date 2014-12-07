@@ -9,6 +9,11 @@ index.addScript = function(f, o){
   return out;
 };
 
+index.addStyle = function(f, o){
+  var out = o + '<link rel="stylesheet" href="./room/closet/styles/'+f+'.css"></link>'
+  return out;
+};
+
 exports.index = function(req, res) {
     res.render('index');
 };
@@ -54,11 +59,13 @@ exports.getRoom = function(req, res) {
   if(gl.lang === "ja"){
     fs.readFile(index.layout_path+gl.flg+"/layout_ja.html", 'utf8', function(err, val) {
       var out = index.addScript(gl.flg, val);
+          out = index.addStyle(gl.flg, out);
       res.send(out);
     });
   }else{
     fs.readFile(index.layout_path+gl.flg+"/layout_en.html", 'utf8', function(err, val) {
       var out = index.addScript(gl.flg, val);
+          out = index.addStyle(gl.flg, out);
       res.send(out);
     });  
   }
