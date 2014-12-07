@@ -51,10 +51,6 @@ font-family: メイリオ;
 font-size: 16px;
 }
 
-.screen.room .text:hover{
-  opacity: 0.5;
-}
-
 @media (max-width: 830px) {
   .screen.room .header .logo {
     color: #F7F7F7;
