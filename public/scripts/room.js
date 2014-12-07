@@ -12,6 +12,9 @@ this.room = this.room || {};
     // [Object]
     room.$room = $('.screen.layer.room');
     room.$layout = $('.screen.layer.layout');
+    room.$create = $('.button.center.create');
+    room.$manage = $('.button.center.manage');
+    room.$what = $('.button.center.what');
     
     // [Var]
     room.space_path = "./room/space/";
@@ -54,8 +57,13 @@ this.room = this.room || {};
     };
 
     room.refreshExplain = function(){
-      room.$room.append(room.explain_start+"This is Room"+room.explain_end);
-      room.$layout.html(room.explain_start+"This is Layout"+room.explain_end);
+      if(room.getLang !== "ja"){
+        room.$room.append(room.explain_start+"This is Room"+room.explain_end);
+        room.$layout.html(room.explain_start+"This is Layout"+room.explain_end);
+      }else{
+        room.$room.append(room.explain_start+"部屋 →"+room.explain_end);
+        room.$layout.html(room.explain_start+"レイアウト →"+room.explain_end);
+      }
       room.$layout.append('<div class="screen loader"><img src="./images/load.svg"></div>');
     };
 
@@ -81,6 +89,18 @@ this.room = this.room || {};
       }
     };
 
+    room.setContent = function() {
+      if(room.getLang !== "ja"){
+        room.$create.text("Create Room");
+        room.$manage.text("Manage Room");
+        room.$what.text("What's Room?");
+      }else{
+        room.$create.text("部屋の作成");
+        room.$manage.text("部屋の管理");
+        room.$what.text("部屋について");
+      }
+    };
+
     room.getSpace = function() {
   
       gs = {};
@@ -101,6 +121,7 @@ this.room = this.room || {};
     };
 
     room.init = function() {
+      room.setContent();
       room.hideSafari();
       room.getSpace();
     };
@@ -121,7 +142,11 @@ this.room = this.room || {};
           }, 280);      
         }else if(room.mode === "layout"){
           $('.screen.layer.layout .loader').fadeOut();
-          $('.layer.layout .explain').text("This is Layout");
+          if(room.getLang !== "ja"){
+            $('.layer.layout .explain').text("This is Layout");
+          }else{
+            $('.layer.layout .explain').text("レイアウト →");
+          }
           room.$body.removeClass("layout2");
           setTimeout(function() {
               room.refreshExplain();
@@ -152,12 +177,24 @@ this.room = this.room || {};
       room.mode = "layout";
       $('.screen.layer.layout .loader').fadeIn();
       if(f === "create"){
-        $('.layer.layout .explain').text("Create Room");
+        if(room.getLang !== "ja"){
+          $('.layer.layout .explain').text("Create Room");
+        }else{
+          $('.layer.layout .explain').text("部屋の作成");        
+        }
         room.getLayout(f, room.createId(7));
       }else if(f === "manage"){
-        $('.layer.layout .explain').text("Manage Room");
+        if(room.getLang !== "ja"){
+          $('.layer.layout .explain').text("Manage Room");
+        }else{
+          $('.layer.layout .explain').text("部屋の管理");
+        }
       }else if(f === "what"){
-        $('.layer.layout .explain').text("What's Room?");
+        if(room.getLang !== "ja"){
+          $('.layer.layout .explain').text("What's Room");
+        }else{
+          $('.layer.layout .explain').text("部屋について");
+        }
       }
       room.$body.addClass("layout");
       setTimeout(function() {
