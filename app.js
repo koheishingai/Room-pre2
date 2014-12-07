@@ -24,6 +24,7 @@ app.configure('development', function() {
 
 app.get('/', routes.index);
 app.get('/getSpace', routes.getSpace);
+app.get('/getObject', routes.getObject);
 app.get('/getLayout', routes.getLayout);
 app.get('/getRoom', routes.getRoom);
 app.get('/users', user.list);

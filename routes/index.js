@@ -3,6 +3,7 @@ fs = require('fs');
 index = {};
 index.space_path = './public/room/space/';
 index.layout_path = './public/room/layout/';
+index.object_path = './public/room/closet/object/';
 
 index.addScript = function(f, o){
   var out = o + '<script src="./room/closet/scripts/'+f+'.js"></script>'
@@ -69,4 +70,15 @@ exports.getRoom = function(req, res) {
       res.send(out);
     });  
   }
+};
+
+exports.getObject = function(req, res) {
+  var go = {};
+  go.list = req.url.split("?");
+  go.flg = go.list[1].split("&_=")[0];
+  //go.lang = go.list[2].split("&_=")[0];
+  console.log(index.object_path+go.flg);
+  fs.readFile(index.object_path+go.flg+".html", 'utf8', function(err, val) {
+    res.send(val);
+  });
 };
