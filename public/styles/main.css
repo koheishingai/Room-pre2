@@ -340,7 +340,7 @@ body.layout2 .screen.layer.layout .loader{
 
     .button.side.view img,
     .button.side.close img {
-        margin-left: 7px;
+        margin-left: 0px;
     }
 .text.logo {
 left: 0px;
@@ -373,4 +373,7 @@ top: 50%;
 left: 50%;
 margin-top: -16px;
 margin-left: -16px;
+}
+.mobile .partial-load img {
+margin-top: -32px;
 }
