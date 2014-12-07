@@ -88,12 +88,18 @@ this.room = this.room || {};
     };
 
     room.getLang = function() {
-     /* try {
+     var href = location.href;
+     if(href.indexOf("?ja") !== -1) {
+       return "ja";
+     }else if(href.indexOf("?en") !== -1){
+       return "en";
+     }else{
+      try {
         return (navigator.browserLanguage || navigator.language || navigator.userLanguage).substr(0, 2);
       } catch (e) {
         return undefined;
-      } */
-      return "en";
+      }
+     }
     };
 
     room.setContent = function() {

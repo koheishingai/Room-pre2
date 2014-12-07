@@ -77,3 +77,9 @@ font-family: メイリオ;
 line-height: 30px;
 }
 
+.screen.layout .content{
+position: fixed;
+width: 100%;
+height: calc(100% - 89px);
+top: 88px;
+}
