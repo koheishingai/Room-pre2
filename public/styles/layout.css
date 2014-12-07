@@ -9,6 +9,12 @@ border-bottom: 1px solid #EFEFEF;
 line-height: 60px;
 overflow: hidden;
 }
+
+.screen.layout .header.mobile{
+top: 48px;
+text-align: center;
+}
+
 .screen.layout .header.sub {
 height: 27px !important;
 top: 60px;
@@ -18,12 +24,22 @@ z-index: 0 !important;
 box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.44);
 }
 
+.screen.layout .header.sub.mobile{
+  top: 108px;
+  background: #9E9E9E;
+}
+
 .screen.layout .header .title{
 margin: 0px;
 font-weight: 100;
 text-indent: 1px;
 color: #747474;
 font-size: 65px;
+}
+
+.screen.layout .header.mobile .title{
+font-size: 29px;
+text-indent: 0px;
 }
 
 .screen.layout .header.sub .sub {
@@ -38,6 +54,17 @@ cursor: pointer;
 border-right: 1px solid #eee;
 }
 
+.screen.layout .header.sub.mobile .sub{
+  color: #fafafa;
+  font-size: 14px;
+}
+
+body.ja .screen.layout .header.mobile .title {
+text-indent: 3px;
+color: #A6A6A6;
+font-size: 31px;
+}
+
 body.ja .screen.layout .header .title{
 text-indent: 3px;
 color: #A6A6A6;
@@ -49,3 +76,4 @@ font-size: 14px;
 font-family: メイリオ;
 line-height: 30px;
 }
+
