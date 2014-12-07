@@ -259,7 +259,11 @@ body.view .button.side.back {
 /* View Frame-2 */
 body.view2 .screen.layer.room {
     transform: perspective(6000px) translateZ(-6000px)rotateX(51deg) rotateY(20deg) rotateZ(-50deg) translateX(180px) translateY(-120px);
-    opacity: 0;
+    opacity: 0.7;
+}
+
+body.view2.mobile .screen.layer.room{
+  opacity: 0;
 }
 
 body.view2 .screen.layer.layout {
