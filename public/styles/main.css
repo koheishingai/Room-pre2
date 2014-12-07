@@ -38,6 +38,10 @@ body {
   z-index: -1;
 }
 
+body.no-touch .button:hover {
+   background: rgba(255, 255, 255, 0.98) !important;
+}
+
 /* [Object] */
 
 /* Screen */

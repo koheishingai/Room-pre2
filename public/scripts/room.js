@@ -24,6 +24,12 @@ this.room = this.room || {};
     room.layout_loader = '<div class="screen loader"><img src="./images/load.svg"></div>';
     room.mode = "main";
 
+    room.noTouch = function(){
+      if(bradev.device !== "other"){
+        room.$body.addClass("no-touch");
+      }
+    };
+
     room.getLayout = function(f, id){
       if(bradev.device === "iphone"){
         var d = "iphone";
@@ -123,6 +129,7 @@ this.room = this.room || {};
     };
 
     room.init = function() {
+      room.noTouch();
       room.setContent();
       room.hideSafari();
       room.getSpace();
