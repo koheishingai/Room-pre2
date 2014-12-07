@@ -30,6 +30,22 @@ this.room = this.room || {};
       }
     };
 
+    room.getRoom = function(f){
+      if(bradev.device === "iphone"){
+        var d = "iphone";
+      }else{
+        var d = "other";
+      }
+      $.ajax({
+        url: "/getRoom?" + f + "_" + d + "?" + room.getLang(),
+        cache: false,
+        success: function(data) {
+          room.$room.html(data);
+          $('.screen.loader').fadeOut();
+        }
+      });
+    };
+
     room.getLayout = function(f, id){
       if(bradev.device === "iphone"){
         var d = "iphone";
@@ -139,6 +155,7 @@ this.room = this.room || {};
       room.setContent();
       room.hideSafari();
       room.getSpace();
+      room.getRoom(room.root_name);
     };
 
     room.init();

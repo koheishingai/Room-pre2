@@ -42,6 +42,7 @@ body.no-touch .button:hover {
    background: rgba(255, 255, 255, 0.98) !important;
 }
 
+
 /* [Object] */
 
 /* Screen */
@@ -71,8 +72,11 @@ body.no-touch .button:hover {
     box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.06);
 }
 
+.screen.layer.layout .loader{
+  display: none;
+}
+
 .screen.loader {
-    display: none; /* [TEMP] */
     background: #fff;
     z-index: 999;
 }
@@ -251,6 +255,7 @@ body.view .button.side.back {
     opacity: 0;
 }
 
+
 /* View Frame-2 */
 body.view2 .screen.layer.room {
     transform: perspective(6000px) translateZ(-6000px)rotateX(51deg) rotateY(20deg) rotateZ(-50deg) translateX(180px) translateY(-120px);
@@ -288,6 +293,10 @@ body.layout.mobile .screen.layer {
     transform: translateY(0%);
 }
 
+body.layout .screen.layer.layout .loader{
+  display: block;
+}
+
 /* Layout Frame-2 */
 body.layout2 .screen.layer{
     transform: perspective(6000px) translateZ(0px) !important;
@@ -302,6 +311,10 @@ body.layout2 .bg-content {
 body.layout2 .bg-content.button.side.close {
   display: block;
   opacity: 1 !important;
+}
+
+body.layout2 .screen.layer.layout .loader{
+  display: block;
 }
 
 /* [Resize] */
@@ -333,4 +346,13 @@ left: 7px;
     .text.copy {
         display: none !important;
     }
+}
+
+/* [For Dev] */
+.prepare{
+  cursor: default !important;
+  opacity: 0.2 !important;
+}
+.prepare:hover{
+background: #fff !important;
 }

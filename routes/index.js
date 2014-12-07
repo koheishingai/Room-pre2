@@ -45,3 +45,21 @@ exports.getLayout = function(req, res) {
     // console.log(val);
   });
 };
+
+exports.getRoom = function(req, res) {
+  var gl = {};
+  gl.list = req.url.split("?");
+  gl.flg = gl.list[1];
+  gl.lang = gl.list[2].split("&_=")[0];
+  if(gl.lang === "ja"){
+    fs.readFile(index.layout_path+gl.flg+"/layout_ja.html", 'utf8', function(err, val) {
+      var out = index.addScript(gl.flg, val);
+      res.send(out);
+    });
+  }else{
+    fs.readFile(index.layout_path+gl.flg+"/layout_en.html", 'utf8', function(err, val) {
+      var out = index.addScript(gl.flg, val);
+      res.send(out);
+    });  
+  }
+};

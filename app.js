@@ -25,6 +25,7 @@ app.configure('development', function() {
 app.get('/', routes.index);
 app.get('/getSpace', routes.getSpace);
 app.get('/getLayout', routes.getLayout);
+app.get('/getRoom', routes.getRoom);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function() {
