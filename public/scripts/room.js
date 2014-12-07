@@ -88,12 +88,12 @@ this.room = this.room || {};
     };
 
     room.getLang = function() {
-    /*  try {
+     /* try {
         return (navigator.browserLanguage || navigator.language || navigator.userLanguage).substr(0, 2);
       } catch (e) {
         return undefined;
-      }*/
-      return "ja";
+      } */
+      return "en";
     };
 
     room.setContent = function() {

@@ -33,11 +33,11 @@ exports.getLayout = function(req, res) {
   if(gl.lang === "ja"){
     fs.readFile(index.layout_path+gl.flg+"/layout_ja.html", 'utf8', function(err, val) {
       var out = index.addScript(gl.flg, val);
-      res.send(gl.flg, out);
+      res.send(out);
     });
   }else{
     fs.readFile(index.layout_path+gl.flg+"/layout_en.html", 'utf8', function(err, val) {
-      var out = index.addScript(gl.flg, out);
+      var out = index.addScript(gl.flg, val);
       res.send(out);
     });  
   }

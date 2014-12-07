@@ -291,6 +291,7 @@ body.layout.mobile .screen.layer {
 /* Layout Frame-2 */
 body.layout2 .screen.layer{
     transform: perspective(6000px) translateZ(0px) !important;
+    box-shadow: none;
 }
 
 body.layout2 .bg-content {
