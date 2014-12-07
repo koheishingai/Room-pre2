@@ -279,8 +279,9 @@ body.view2 .bg-content {
 /* Layout Frame-1 */
 body.layout .screen.layer.layout {
     transform: perspective(6000px) translateZ(-6000px)rotateX(51deg) rotateY(20deg) rotateZ(-50deg) translateX(180px) translateY(-120px);
-    opacity: 0.7;
+    opacity: 1;
     z-index: 2;
+    background: #fff;
 }
 
 body.layout .screen.layer.room {
