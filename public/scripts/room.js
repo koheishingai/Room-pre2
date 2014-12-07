@@ -57,12 +57,12 @@ this.room = this.room || {};
     };
 
     room.refreshExplain = function(){
-      if(room.getLang !== "ja"){
+      if(room.getLang() !== "ja"){
         room.$room.append(room.explain_start+"This is Room"+room.explain_end);
         room.$layout.html(room.explain_start+"This is Layout"+room.explain_end);
       }else{
-        room.$room.append(room.explain_start+"部屋 →"+room.explain_end);
-        room.$layout.html(room.explain_start+"レイアウト →"+room.explain_end);
+        room.$room.append(room.explain_start+"部屋"+room.explain_end);
+        room.$layout.html(room.explain_start+"レイアウト"+room.explain_end);
       }
       room.$layout.append('<div class="screen loader"><img src="./images/load.svg"></div>');
     };
@@ -82,19 +82,21 @@ this.room = this.room || {};
     };
 
     room.getLang = function() {
-      try {
+    /*  try {
         return (navigator.browserLanguage || navigator.language || navigator.userLanguage).substr(0, 2);
       } catch (e) {
         return undefined;
-      }
+      }*/
+      return "ja";
     };
 
     room.setContent = function() {
-      if(room.getLang !== "ja"){
+      if(room.getLang() !== "ja"){
         room.$create.text("Create Room");
         room.$manage.text("Manage Room");
         room.$what.text("What's Room?");
       }else{
+        room.$body.addClass("ja");
         room.$create.text("部屋の作成");
         room.$manage.text("部屋の管理");
         room.$what.text("部屋について");
@@ -142,10 +144,10 @@ this.room = this.room || {};
           }, 280);      
         }else if(room.mode === "layout"){
           $('.screen.layer.layout .loader').fadeOut();
-          if(room.getLang !== "ja"){
+          if(room.getLang() !== "ja"){
             $('.layer.layout .explain').text("This is Layout");
           }else{
-            $('.layer.layout .explain').text("レイアウト →");
+            $('.layer.layout .explain').text("レイアウト");
           }
           room.$body.removeClass("layout2");
           setTimeout(function() {
@@ -177,20 +179,20 @@ this.room = this.room || {};
       room.mode = "layout";
       $('.screen.layer.layout .loader').fadeIn();
       if(f === "create"){
-        if(room.getLang !== "ja"){
+        if(room.getLang() !== "ja"){
           $('.layer.layout .explain').text("Create Room");
         }else{
           $('.layer.layout .explain').text("部屋の作成");        
         }
         room.getLayout(f, room.createId(7));
       }else if(f === "manage"){
-        if(room.getLang !== "ja"){
+        if(room.getLang() !== "ja"){
           $('.layer.layout .explain').text("Manage Room");
         }else{
           $('.layer.layout .explain').text("部屋の管理");
         }
       }else if(f === "what"){
-        if(room.getLang !== "ja"){
+        if(room.getLang() !== "ja"){
           $('.layer.layout .explain').text("What's Room");
         }else{
           $('.layer.layout .explain').text("部屋について");
