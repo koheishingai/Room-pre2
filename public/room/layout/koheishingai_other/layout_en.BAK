@@ -1,0 +1,16 @@
+<div class="header">
+<h1 class="logo">Kohei Shingai</h1>
+<p class="text menu">for Recruiter</p>
+</div>
+<div class="color-drip" object="color-drip"></div>
+<dov class="content">
+<div class="box n0 top">
+  <div class="in"></div>
+</div>
+<div class="box n1">
+  <div class="in"></div>
+</div>
+<div class="loading">
+<h1 class="text">Load Contents</h1>
+</div>
+</div>

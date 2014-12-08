@@ -1,4 +1,4 @@
-/* [Font] */
+﻿/* [Font] */
 
 /* Roboto - 400, 300, 100 */
 /* Usage: font-family: 'Roboto', sans-serif; */
@@ -174,15 +174,15 @@ body.ja .button.center {
 }
 
 .button.center.create {
-margin-top: -57px;
-}
-
-.button.center.manage {
 margin-top: -4px;
 }
 
-.button.center.what {
+.button.center.manage {
 margin-top: 49px;
+}
+
+.button.center.what {
+margin-top: -57px;
 }
 
 

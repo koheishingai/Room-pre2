@@ -79,6 +79,9 @@ exports.getObject = function(req, res) {
   //go.lang = go.list[2].split("&_=")[0];
   console.log(index.object_path+go.flg);
   fs.readFile(index.object_path+go.flg+".html", 'utf8', function(err, val) {
-    res.send(val);
+    go.flg = go.flg.split("_")[0];
+    var out = index.addScript(go.flg, val);
+        out = index.addStyle(go.flg, out);
+    res.send(out);
   });
 };
