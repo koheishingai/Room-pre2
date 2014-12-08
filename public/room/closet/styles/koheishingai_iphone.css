@@ -112,3 +112,10 @@ font-size: 16px;
     color: #F7F7F7;
   }
 }
+
+/* [TEMP] */
+@media (max-height: 388px) {
+  .button.side.view {
+    display:none;
+  }
+}
