@@ -85,8 +85,20 @@ height: calc(100% - 89px);
 top: 88px;
 }
 
-.screen.layout .content.movie{
+.screen.layout .content.movie {
 padding: 30px;
+background: url(https://farm8.staticflickr.com/7560/15975026411_59151ea0aa_o.jpg);
+background-size: cover;
+background-position: 50%;
+margin-top: 1px;
+}
+
+.screen.layout .content.movie .in {
+width: 100%;
+height: 100%;
+margin-top: -1px;
+background: rgba(255, 255, 255, 0.33);
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.17);
 }
 
 .screen.layout .content.mobile.create {
@@ -133,14 +145,15 @@ margin-left: -90px;
 height: calc(100% - 136px);
 }
 
-.screen.layout .content.movie span{
+.screen.layout .content.movie span {
 position: absolute;
 top: 50%;
 margin-top: -10px;
 font-size: 14px;
 width: calc(100% - 60px);
 text-align: center;
-color: #CFCFCF;
+color: #999999;
+cursor: default;
 }
 
 .screen.layout .explain {
