@@ -1,4 +1,4 @@
-/* [Object] */
+﻿/* [Object] */
 .screen.layout .header {
 background: #fff;
 position: fixed;
@@ -198,16 +198,14 @@ padding: 3px 0px;
 font-size: 23px;
 font-family: メイリオ;
 }
-
 body.ja .screen.layout .explain {
 font-family: メイリオ;
 font-size: 17px;
 line-height: 30px;
 color: #6C6C6C;
-margin-top: -130px;
+margin-top: -146px;
 padding: 20px;
 }
-
 .screen.layout .explain .in {
 padding: 20px;
 background: rgba(255, 255, 255, 0.33);
