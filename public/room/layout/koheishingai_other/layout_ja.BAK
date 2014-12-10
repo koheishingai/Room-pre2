@@ -1,6 +1,6 @@
 <div class="header">
   <h1 class="logo">Kohei Shingai</h1>
-  <p class="text menu">コラボしませんか？</p>
+  <p class="text menu href" target="collaboration">提携しませんか？</p>
 </div>
 <div class="color-drip" object="color-drip"></div>
 <div class="content">

@@ -1,5 +1,5 @@
-this.what = this.what || {};
-(function(what) {
+this.create = this.create || {};
+(function(create) {
   'Use Strict'
-}(this.what));
+}(this.create));
 //Kohei Shingai
