@@ -237,5 +237,15 @@ this.room = this.room || {};
       }, 280);    
     };
 
+  room.ios = function(i, m){
+    $('.ui-ios-overlay img').attr("src", "./images/ios_"+i+".png")
+    $('.ui-ios-overlay .title').text(m);
+    $('.ui-ios-overlay').fadeIn(function(){
+      setTimeout(function(){
+        $('.ui-ios-overlay').fadeOut();
+      }, 330);
+    });
+  }
+
 }(this.room));
 //Kohei Shingai

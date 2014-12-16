@@ -178,6 +178,13 @@ padding: 20px;
 margin: 11px 0;
 }
 
+.screen.layout .explain p.block0 {
+font-size: 17px;
+opacity: 0.5;
+margin: -3px 0px -4px;
+color: rgb(255, 68, 44);
+}
+
 .screen.layout .explain input {
 border: none;
 background: rgba(0, 0, 0, 0.47);
@@ -203,7 +210,7 @@ font-family: メイリオ;
 font-size: 17px;
 line-height: 30px;
 color: #6C6C6C;
-margin-top: -146px;
+margin-top: -158px;
 padding: 20px;
 }
 .screen.layout .explain .in {
