@@ -357,6 +357,11 @@ margin-bottom: 4px;
 body.ja.mobile .article-panel-type01 .panel .img .in .right-bottom {
 font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", "MS PGothic", "MS UI Gothic", Helvetica, Arial, sans-serif;
 }
+
+body.ja.mobile .article-panel-type01 .panel .img.left .in .right-bottom{
+  margin-top: -5px;
+}
+
 .article-panel-type01 .panel .img.top .in .right-bottom {
 margin-top: -4px;
 margin-bottom: -15px;
