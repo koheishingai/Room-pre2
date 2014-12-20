@@ -145,18 +145,18 @@
         setTimeout(function() {
             object.setPanel();
             object.loadData(object.article_name);
-            if($('body').hasClass("mobile") === true){
-              $('.thumb').hide();
-              setTimeout(function() {
-                object.loadData(object.article_name);
-                $('.thumb').fadeIn();
-              }, 1000);
-            }else{
-              $('.thumb').hide();
-              setTimeout(function() {
-                object.loadData(object.article_name);
-                $('.thumb').fadeIn();
-              }, 280);            
+            if ($('body').hasClass("mobile") === true) {
+                $('.thumb').hide();
+                setTimeout(function() {
+                    object.loadData(object.article_name);
+                    $('.thumb').fadeIn();
+                }, 1000);
+            } else {
+                $('.thumb').hide();
+                setTimeout(function() {
+                    object.loadData(object.article_name);
+                    $('.thumb').fadeIn();
+                }, 280);
             }
         }, 1350);
     }
@@ -179,30 +179,30 @@
     });
 
     $('.img.href').click(function() {
-        room.position = koheishingai.$href.attr("target")
+        room.position = $(this).attr("article-id");
+        room.now = "_"+room.position;
         koheishingai.$body.addClass("trn");
         setTimeout(function() {
-            // koheishingai.$body.addClass("trn2");
-            // setTimeout(function() {
             koheishingai.$loader.fadeIn(function() {
-                // koheishingai.$body.removeClass("trn2");
+              setTimeout(function(){
+                room.getRoom(room.root_name);
+              }, 280);
                 if (room.getLang() === "ja") {
-                    room.ios("cooking", "準備中です");
-                    setTimeout(function() {
+                    // room.ios("cooking", "準備中です");
+                    /* setTimeout(function() {
                         koheishingai.$loader.fadeOut(function() {
                             koheishingai.$body.removeClass("trn");
                         });
-                    }, 430);
+                    }, 430); [TEMP] */
                 } else {
-                    room.ios("cooking", "Now Preparing");
-                    setTimeout(function() {
+                    // room.ios("cooking", "Now Preparing");
+                    /* setTimeout(function() {
                         koheishingai.$loader.fadeOut(function() {
                             koheishingai.$body.removeClass("trn");
                         });
-                    }, 430);
+                    }, 430); [TEMP] */
                 }
             });
-            // }, 180);
         }, 280);
     });
 
