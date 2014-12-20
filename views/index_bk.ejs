@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html itemscope="" itemtype="http://schema.org/WebPage" name="koheishingai">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="origin" id="mref" name="referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <link class="favicon" rel="shortcut icon" href="" type="image/x-icon">
+    <link class="favicon" rel="icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link class="styles" rel="stylesheet" href="">
+    <title></title>
+</head>
+
+<body>
+    <div class="screen layer room"></div>
+    <div class="screen layer layout">
+        <div class="screen loader">
+            <img src="./images/load.svg">
+        </div>
+    </div>
+    <h1 class="bg-content text logo" onClick="room.edit">Room</h1>
+    <h1 class="bg-content text logo sub">Create Your World Simply</h1>
+    <div class="no-touch bg-content button center create prepare" style="opacity: 0.2 !important;"></div>
+    <div class="no-touch bg-content button center manage prepare" style="opacity: 0.2 !important;"></div>
+    <div class="no-touch bg-content button center what" onClick="room.layout('what')"></div>
+    <div class="hide-safari bg-content text copy">Created by Kohei Shingai 2014</div>
+    <div class="bg-content button side close" onClick="room.close()">
+        <img src="./images/close.svg" />
+    </div>
+    <div class="href button side back" to="root" onClick="room.back()">
+        <img src="./images/back.svg" />
+    </div>
+    <div class="button side view" onClick="room.view()">
+        <img src="./images/view.svg" />
+    </div>
+    <a class="hide-safari bg-content ribbon" target="_blank" href="https://github.com/koheishingai/Room"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork Room on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png">
+    </a>
+    <div class="screen loader">
+        <img src="./images/load.svg">
+    </div>
+    <div class="ui-ios-overlay">
+        <img src="">
+        <div class="title"></div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./scripts/room-bradev.js"></script>
+    <script src="./scripts/room.js"></script>
+</body>
+
+</html>

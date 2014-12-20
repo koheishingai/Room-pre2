@@ -174,14 +174,14 @@
             koheishingai.$loader.fadeIn(function() {
                 // koheishingai.$body.removeClass("trn2");
                 if (room.getLang() === "ja") {
-                    room.ios("cross", "作成中です");
+                    room.ios("cooking", "準備中です");
                     setTimeout(function() {
                         koheishingai.$loader.fadeOut(function() {
                             koheishingai.$body.removeClass("trn");
                         });
                     }, 430);
                 } else {
-                    room.ios("cross", "Now Preparing");
+                    room.ios("cooking", "Now Preparing");
                     setTimeout(function() {
                         koheishingai.$loader.fadeOut(function() {
                             koheishingai.$body.removeClass("trn");

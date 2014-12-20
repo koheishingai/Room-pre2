@@ -1,10 +1,66 @@
 this.room = this.room || {};
 (function(room) {
-'Use Strict'
-/* [Environment] */room.$favicon = $('.favicon');room.$styles = $('.styles');room.$title = $('title');room.$body = $('body');room.$hide_safari = $('.hide-safari');/* [Object] */room.$room = $('.screen.layer.room');room.$layout = $('.screen.layer.layout');room.$create = $('.button.center.create');room.$manage = $('.button.center.manage');room.$what = $('.button.center.what');/* [Var] */room.space_path = "./room/space/";room.root_name = $("html").attr("name");room.explain_start = "<div class='bg-content text explain'>";room.explain_end = "</div>";room.layout_loader = '<div class="screen loader"><img src="./images/load.svg"></div>';room.mode = "main";
-room.noTouch=function(){if(bradev.device!=="other"){room.$body.addClass("no-touch")}};
-room.getRoom=function(f){if(bradev.device==="iphone"){var d="iphone"}else{var d="other"}$.ajax({url:"/getRoom?"+f+"_"+d+"?"+room.getLang(),cache:false,success:function(data){room.$room.html(data);$('.screen.loader').fadeOut()}})};
-room.getLayout=function(f,id){if(bradev.device==="iphone"){var d="iphone"}else{var d="other"}$.ajax({url:"/getLayout?"+f+"_"+d+"?"+room.getLang()+"?"+id,cache:false,success:function(data){room.$layout.html(data);$('.screen.layer.layout .loader').fadeOut()}})};
+    'Use Strict'
+
+    // [Environment]
+    room.$favicon = $('.favicon');
+    room.$styles = $('.styles');
+    room.$title = $('title');
+    room.$body = $('body');
+    room.$hide_safari = $('.hide-safari');
+
+    // [Object]
+    room.$room = $('.screen.layer.room');
+    room.$layout = $('.screen.layer.layout');
+    room.$create = $('.button.center.create');
+    room.$manage = $('.button.center.manage');
+    room.$what = $('.button.center.what');
+    
+    // [Var]
+    room.space_path = "./room/space/";
+    room.root_name = $("html").attr("name");
+    room.explain_start = "<div class='bg-content text explain'>";
+    room.explain_end = "</div>";
+    room.layout_loader = '<div class="screen loader"><img src="./images/load.svg"></div>';
+    room.mode = "main";
+
+    room.noTouch = function(){
+      if(bradev.device !== "other"){
+        room.$body.addClass("no-touch");
+      }
+    };
+
+    room.getRoom = function(f){
+      if(bradev.device === "iphone"){
+        var d = "iphone";
+      }else{
+        var d = "other";
+      }
+      $.ajax({
+        url: "/getRoom?" + f + "_" + d + "?" + room.getLang(),
+        cache: false,
+        success: function(data) {
+          room.$room.html(data);
+          $('.screen.loader').fadeOut();
+        }
+      });
+    };
+
+    room.getLayout = function(f, id){
+      if(bradev.device === "iphone"){
+        var d = "iphone";
+      }else{
+        var d = "other";
+      }
+      $.ajax({
+        url: "/getLayout?" + f + "_" + d + "?" + room.getLang() +"?" + id,
+        cache: false,
+        success: function(data) {
+          room.$layout.html(data);
+          $('.screen.layer.layout .loader').fadeOut();
+        }
+      });
+    };
 
     room.createId = function(num){
       var str = '';
@@ -182,13 +238,7 @@ room.getLayout=function(f,id){if(bradev.device==="iphone"){var d="iphone"}else{v
     };
 
   room.ios = function(i, m){
-    if(i !== 'cooking'){
-      $('.ui-ios-overlay').removeClass('svg');
-      $('.ui-ios-overlay img').attr("src", "./images/ios_"+i+".png");
-    }else{
-      $('.ui-ios-overlay').addClass('svg');
-      $('.ui-ios-overlay img').attr("src", "./images/ios_"+i+".svg");
-    }
+    $('.ui-ios-overlay img').attr("src", "./images/ios_"+i+".png")
     $('.ui-ios-overlay .title').text(m);
     $('.ui-ios-overlay').fadeIn(function(){
       setTimeout(function(){
