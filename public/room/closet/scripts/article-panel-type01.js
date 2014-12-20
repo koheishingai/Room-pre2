@@ -143,8 +143,8 @@
 
     object.init = function() {
         $('.thumb').hide();
-        $('.right-size').hide();
-        $('.left-size').hide();
+        $('.right-bottom').hide();
+        $('.left-bottom').hide();
         setTimeout(function() {
             object.setPanel();
             object.loadData(object.article_name);
@@ -153,13 +153,15 @@
                 setTimeout(function() {
                     object.loadData(object.article_name);
                     $('.thumb').fadeIn();
+                    $('.right-bottom').fadeIn();
+                    $('.left-bottom').fadeIn(); 
                 }, 1000);
             } else {
                 setTimeout(function() {
                     object.loadData(object.article_name);
                     $('.thumb').fadeIn();
-                    $('.right-size').faeIn();
-                    $('.left-size').fadeIn();                    
+                    $('.right-bottom').fadeIn();
+                    $('.left-bottom').fadeIn();                    
                 }, 280);
             }
         }, 1350);
