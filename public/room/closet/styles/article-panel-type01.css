@@ -282,8 +282,13 @@ white-space: nowrap;
 }
 
 body.ja .article-panel-type01 .panel .img .in .thumb .title {
+    font-family: メイリオ;
+}
+
+body.ja.mobile .article-panel-type01 .panel .img .in .thumb .title {
     font-family: メイリオ, "MS PGothic", "Osaka", Arial, sans-serif;
 }
+
 
 .article-panel-type01 .panel .img .in .thumb .sub {
     color: rgb(68, 68, 68);
@@ -309,6 +314,10 @@ body.ja .article-panel-type01 .panel .img .in .thumb .title {
 }
 
 body.ja .article-panel-type01 .panel .img .in .thumb .title {
+    font-family: メイリオ;
+}
+
+body.ja.mobile .article-panel-type01 .panel .img .in .thumb .title {
     font-family: メイリオ, "MS PGothic", "Osaka", Arial, sans-serif;
 }
 
