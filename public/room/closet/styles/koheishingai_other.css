@@ -140,3 +140,11 @@ body.trn .screen.layer {
 body.trn2 .screen.layer {
     transform: perspective(6000px) translateZ(-6000px) translateX(-200%);
 }
+
+body.ja.mobile .screen.room .content .loading .text {
+    font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", "MS PGothic", "MS UI Gothic", Helvetica, Arial, sans-serif;
+}
+
+body.ja.mobile .screen.room .header .text.menu {
+    font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", "MS PGothic", "MS UI Gothic", Helvetica, Arial, sans-serif;
+}
