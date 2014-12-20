@@ -89,18 +89,18 @@ body.ja .screen.room .content .loading .text {
 }
 
 .screen.room .header .text.menu {
-    margin: 0px;
-    position: absolute;
-    right: 7px;
-    line-height: 86px;
-    color: #999999;
-    cursor: pointer;
-    height: 80px;
-    font-size: 16px;
-    transition: opacity 0.2s ease-in-out;
-    font-weight: 400;
-    font-family: "Roboto";
-    font-size: 19px;
+margin: 0px;
+position: absolute;
+right: 7px;
+line-height: 86px;
+color: #999999;
+height: 80px;
+font-size: 16px;
+transition: opacity 0.2s ease-in-out;
+font-weight: 400;
+font-family: "Roboto";
+font-size: 19px;
+cursor: default;
 }
 
 body.ja .screen.room .header .text.menu {
