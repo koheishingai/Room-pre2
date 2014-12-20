@@ -148,3 +148,7 @@ body.ja.mobile .screen.room .content .loading .text {
 body.ja.mobile .screen.room .header .text.menu {
     font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", "MS PGothic", "MS UI Gothic", Helvetica, Arial, sans-serif;
 }
+
+body.ja.no-touch .screen.room .text:hover {
+opacity: 1 !important;
+}
