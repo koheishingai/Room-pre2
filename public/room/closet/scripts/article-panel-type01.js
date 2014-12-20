@@ -186,6 +186,7 @@
             koheishingai.$loader.fadeIn(function() {
               setTimeout(function(){
                 room.getRoom(room.root_name);
+                location.hash = "/"+room.position;
               }, 280);
                 if (room.getLang() === "ja") {
                     // room.ios("cooking", "準備中です");
