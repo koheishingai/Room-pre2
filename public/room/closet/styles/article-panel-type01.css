@@ -286,7 +286,7 @@ body.ja .article-panel-type01 .panel .img .in .thumb .title {
 }
 
 body.ja.mobile .article-panel-type01 .panel .img .in .thumb .title {
-    font-family: メイリオ, "MS PGothic", "Osaka", Arial, sans-serif;
+    font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", "MS PGothic", "MS UI Gothic", Helvetica, Arial, sans-serif;
 }
 
 
@@ -318,7 +318,7 @@ body.ja .article-panel-type01 .panel .img .in .thumb .title {
 }
 
 body.ja.mobile .article-panel-type01 .panel .img .in .thumb .title {
-    font-family: メイリオ, "MS PGothic", "Osaka", Arial, sans-serif;
+    font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", "MS PGothic", "MS UI Gothic", Helvetica, Arial, sans-serif;
 }
 
 body.ja .article-panel-type01 .panel .img .in .thumb .title.m {
@@ -349,11 +349,14 @@ font-family: "Roboto";
 }
 
 body.ja .article-panel-type01 .panel .img .in .right-bottom {
-font-family: メイリオ, "MS PGothic", "Osaka", Arial, sans-serif;
+font-family: メイリオ;
 /* margin-top: -28px; */
 margin-bottom: 4px;
 }
 
+body.ja.mobile .article-panel-type01 .panel .img .in .right-bottom {
+font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", "MS PGothic", "MS UI Gothic", Helvetica, Arial, sans-serif;
+}
 .article-panel-type01 .panel .img.top .in .right-bottom {
 margin-top: -4px;
 margin-bottom: -15px;
