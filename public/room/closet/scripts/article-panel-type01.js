@@ -146,10 +146,10 @@
             object.setPanel();
             object.loadData(object.article_name);
             if($('body').hasClass("mobile") === true){
-              $('.thumb').hide();
+              $('.thumb h1').hide();
               setTimeout(function() {
                 object.loadData(object.article_name);
-                $('.thumb').fadeIn();
+                $('.thumb h1').fadeIn();
               }, 1350);
             }
         }, 1350);
