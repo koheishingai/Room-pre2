@@ -50,6 +50,7 @@
     transition: opacity 0.2s ease-in-out;
     font-family: "Roboto";
     font-weight: 100;
+    display: none;
 }
 
 body.ja .screen.room .content .loading .text {
