@@ -145,13 +145,13 @@
         setTimeout(function() {
             object.setPanel();
             object.loadData(object.article_name);
-            if($('body').hasClass("mobile") === true){
+            //if($('body').hasClass("mobile") === true){
               $('.thumb').hide();
               setTimeout(function() {
                 object.loadData(object.article_name);
                 $('.thumb').fadeIn();
               }, 1000);
-            }
+            //}
         }, 1350);
     }
 
