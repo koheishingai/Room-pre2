@@ -53,7 +53,7 @@
 }
 
 body.ja .screen.room .content .loading .text {
-    font-family: メイリオ, "MS PGothic", "Osaka", Arial, sans-serif;
+    font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", "MS PGothic", "MS UI Gothic", Helvetica, Arial, sans-serif;
 }
 
 .screen.layer.room {
