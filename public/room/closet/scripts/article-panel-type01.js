@@ -150,7 +150,7 @@
               setTimeout(function() {
                 object.loadData(object.article_name);
                 $('.thumb').fadeIn();
-              }, 1550);
+              }, 280);
             }
         }, 1350);
     }
