@@ -105,7 +105,7 @@ body.ja .screen.room .content .loading .text {
 
 body.ja .screen.room .header .text.menu {
     font-weight: 100;
-    font-family: メイリオ, "MS PGothic", "Osaka", Arial, sans-serif;
+    font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", "MS PGothic", "MS UI Gothic", Helvetica, Arial, sans-serif;
     font-size: 16px;
 }
 
