@@ -282,7 +282,7 @@ white-space: nowrap;
 }
 
 body.ja .article-panel-type01 .panel .img .in .thumb .title {
-    font-family: メイリオ;
+    font-family: メイリオ, "MS PGothic", "Osaka", Arial, sans-serif;
 }
 
 .article-panel-type01 .panel .img .in .thumb .sub {
@@ -309,7 +309,7 @@ body.ja .article-panel-type01 .panel .img .in .thumb .title {
 }
 
 body.ja .article-panel-type01 .panel .img .in .thumb .title {
-    font-family: メイリオ;
+    font-family: メイリオ, "MS PGothic", "Osaka", Arial, sans-serif;
 }
 
 body.ja .article-panel-type01 .panel .img .in .thumb .title.m {
@@ -340,7 +340,7 @@ font-family: "Roboto";
 }
 
 body.ja .article-panel-type01 .panel .img .in .right-bottom {
-font-family: メイリオ;
+font-family: メイリオ, "MS PGothic", "Osaka", Arial, sans-serif;
 /* margin-top: -28px; */
 margin-bottom: 4px;
 }

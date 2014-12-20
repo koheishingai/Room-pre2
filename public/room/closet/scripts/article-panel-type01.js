@@ -96,7 +96,7 @@
                 $(ss.img_now + ' .thumb').css("background", "url(" + ss.out[3] + ")");
             }
             if (ss.out[4] !== undefined) {
-                $('head').append("<style>.article-panel-type01 .panel " + ss.img_now + " .thumb:hover{background:url(" + ss.out[4] + ") !important}body.no-touch .article-panel-type01 .panel " + ss.img_now + " .thumb:hover{background:url(" + ss.out[3] + ") !important}</style>");
+                $('head').append("<style>.article-panel-type01 .panel " + ss.img_now + " .thumb:hover{background:url(" + ss.out[4] + ") !important}body.no-touch .article-panel-type01 .panel " + ss.img_now + " .thumb:hover{background:url(" + ss.out[3] + ") !important;background-position: 50% !important;background-size: cover !important;}</style>");
             }
             $(ss.img_now + ' .in .l .title').text(ss.title_out.split(":::")[0]);
             $(ss.img_now + ' .in .right-bottom').text(ss.title_out.split(":::")[1]);
