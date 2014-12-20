@@ -142,6 +142,9 @@
     };
 
     object.init = function() {
+        $('.thumb').hide();
+        $('.right-size').hide();
+        $('.left-size').hide();
         setTimeout(function() {
             object.setPanel();
             object.loadData(object.article_name);
@@ -152,9 +155,6 @@
                     $('.thumb').fadeIn();
                 }, 1000);
             } else {
-                $('.thumb').hide();
-                $('.right-size').hide();
-                $('.left-size').hide();
                 setTimeout(function() {
                     object.loadData(object.article_name);
                     $('.thumb').fadeIn();
