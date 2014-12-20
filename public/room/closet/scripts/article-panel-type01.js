@@ -153,9 +153,13 @@
                 }, 1000);
             } else {
                 $('.thumb').hide();
+                $('.right-size').hide();
+                $('.left-size').hide();
                 setTimeout(function() {
                     object.loadData(object.article_name);
                     $('.thumb').fadeIn();
+                    $('.right-size').faeIn();
+                    $('.left-size').fadeIn();                    
                 }, 280);
             }
         }, 1350);
