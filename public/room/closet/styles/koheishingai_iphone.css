@@ -53,7 +53,7 @@
 }
 
 body.ja .screen.room .content .loading .text {
-    font-family: メイリオ;
+    font-family: メイリオ, "MS PGothic", "Osaka", Arial, sans-serif;
 }
 
 .screen.layer.room {
@@ -105,7 +105,7 @@ body.ja .screen.room .content .loading .text {
 
 body.ja .screen.room .header .text.menu {
     font-weight: 100;
-    font-family: メイリオ;
+    font-family: メイリオ, "MS PGothic", "Osaka", Arial, sans-serif;
     font-size: 16px;
 }
 
