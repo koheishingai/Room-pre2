@@ -188,6 +188,7 @@
         room.position = $(this).attr("article-id");
         room.now = "_"+room.position;
         koheishingai.$body.addClass("trn");
+        koheishingai.$body.addClass(room.position);
         setTimeout(function() {
             koheishingai.$loader.fadeIn(function() {
               setTimeout(function(){
