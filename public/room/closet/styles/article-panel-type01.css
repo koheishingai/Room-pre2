@@ -359,8 +359,14 @@ font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", "MS PGothic", "MS UI G
 }
 
 body.ja.mobile .article-panel-type01 .panel .img.left .in .right-bottom{
-  margin-top: -7px;
+  margin-top: -8px;
 }
+
+body.ja.mobile .article-panel-type01 .panel .img.top .in .right-bottom{
+  margin-top: -8px;
+}
+
+
 
 .article-panel-type01 .panel .img.top .in .right-bottom {
 margin-top: -4px;
