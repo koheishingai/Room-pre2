@@ -148,7 +148,7 @@
             if($('body').hasClass("mobile") === true){
               setTimeout(function() {
                 object.loadData(object.article_name);
-              }, 2000);
+              }, 1350);
             }
         }, 1350);
     }
