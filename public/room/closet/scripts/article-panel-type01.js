@@ -191,25 +191,28 @@
         koheishingai.$body.addClass(room.position);
         setTimeout(function() {
             koheishingai.$loader.fadeIn(function() {
-              setTimeout(function(){
-                room.getRoom(room.root_name);
-                location.hash = "/"+room.position;
-              }, 280);
+              if(room.position === "about"){
+                setTimeout(function(){
+                  room.getRoom(room.root_name);
+                  location.hash = "/"+room.position;
+                }, 280);
+              }else{
                 if (room.getLang() === "ja") {
-                    // room.ios("cooking", "準備中です");
-                    /* setTimeout(function() {
+                    room.ios("cooking", "準備中です");
+                    setTimeout(function() {
                         koheishingai.$loader.fadeOut(function() {
                             koheishingai.$body.removeClass("trn");
                         });
-                    }, 430); [TEMP] */
+                    }, 430);
                 } else {
-                    // room.ios("cooking", "Now Preparing");
-                    /* setTimeout(function() {
+                    room.ios("cooking", "Now Preparing");
+                    setTimeout(function() {
                         koheishingai.$loader.fadeOut(function() {
                             koheishingai.$body.removeClass("trn");
                         });
-                    }, 430); [TEMP] */
+                    }, 430);
                 }
+              }
             });
         }, 280);
     });
