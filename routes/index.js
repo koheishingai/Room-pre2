@@ -22,11 +22,21 @@ exports.index = function(req, res) {
 };
 
 exports.picture = function(req, res) {
-    res.render('picture');
+    if(req.url.indexOf("?id:") !== -1){
+      var id_out = req.url.split("?id:")[1];
+      res.render('picture', {id:id_out});
+    }else{
+      res.render('picture', {id:"404"});
+    }
 };
 
 exports.sentence = function(req, res) {
-    res.render('sentence');
+    if(req.url.indexOf("?id:") !== -1){
+      var id_out = req.url.split("?id:")[1];
+      res.render('sentence', {id:id_out});
+    }else{
+      res.render('sentence', {id:"404"});
+    }
 };
 
 exports.getSpace = function(req, res) {

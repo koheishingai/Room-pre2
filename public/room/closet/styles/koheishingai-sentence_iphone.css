@@ -91,6 +91,9 @@ width: 240px;
 -o-transition: all ease-in-out 0.28s;
 transition: all ease-in-out 0.28s;
 }
+body.empty .side-nav ul{
+  display: none;
+}
 body li {
 list-style: none;
 padding: 7px 0 7px;
@@ -876,7 +879,10 @@ body .foot-load.on section div{
 -moz-transform: translateX(0%);
 transform: translateX(0%);
 }
-
+body .content .menu-list.hide {
+  opacity: 0 !important;
+  display: none !important;
+}
 
 
 @media (max-width: 1170px){
@@ -908,10 +914,6 @@ opacity: 1;
 display: block;
 transition: opacity 0.2s ease-in-out;
 padding-top: 1em;
-}
-body .content .menu-list.hide {
-  opacity: 0 !important;
-  display: none !important;
 }
 body .content .menu-list li a {
 display: block;

@@ -880,7 +880,10 @@ body.about .foot-load.on section div{
 transform: translateX(0%);
 }
 
-
+body.about .content .menu-list.hide {
+  opacity: 0 !important;
+  display: none !important;
+}
 
 @media (max-width: 1170px){
 body.about .side-nav {
@@ -911,10 +914,6 @@ opacity: 1;
 display: block;
 transition: opacity 0.2s ease-in-out;
 padding-top: 1em;
-}
-body.about .content .menu-list.hide {
-  opacity: 0 !important;
-  display: none !important;
 }
 body.about .content .menu-list li a {
 display: block;

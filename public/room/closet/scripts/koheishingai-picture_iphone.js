@@ -1,43 +1,53 @@
-this.about = this.about || {};
-(function(about) {
+this.picture = this.picture || {};
+(function(picture) {
   'Use Strict'
   
-  about.width = window.innerWidth;
-  about.height = window.innerHeight;  
+  picture.width = window.innerWidth;
+  picture.height = window.innerHeight;  
+  picture.id = $('body').attr("data");
   
-  about.$content = $('body.about .content');
-  about.$menu = $('body.about .search_w .menu');
-  about.$menu_list = $('body.about .content .menu-list');
+  picture.$content = $('.content');
+  picture.$menu = $('search_w .menu');
+  picture.$menu_list = $('.content .menu-list');
     
-  about.sizeContent = function(w, h){
-    about.$content.css("height", h - 100);
+  picture.dataCheck = function(){
+    if(picture.id === "404"){
+      $('body').addClass("empty");
+    }else{
+      $('body').removeClass("empty");
+    }
+  };
+    
+  picture.sizeContent = function(w, h){
+    picture.$content.css("height", h - 100);
   };
   
-  about.init = function(){
-    about.sizeContent(about.width, about.height);
+  picture.init = function(){
+    picture.sizeContent(picture.width, picture.height);
     room.getObject();
+    picture.dataCheck();
   }
   
-  about.init();
+  picture.init();
   
   $(window).resize(function() {
-    about.width = window.innerWidth;
-    about.height = window.innerHeight;
-    if (about.timer !== false) {
-      clearTimeout(about.timer)
+    picture.width = window.innerWidth;
+    picture.height = window.innerHeight;
+    if (picture.timer !== false) {
+      clearTimeout(picture.timer)
     }
-    about.timer = setTimeout(function() {
-      about.sizeContent(about.width, about.height);
+    picture.timer = setTimeout(function() {
+      picture.sizeContent(picture.width, picture.height);
     }, 100)
   });
   
-  about.$menu.click(function(){
-    if(about.$menu_list.hasClass("hide") === false){
-      about.$menu_list.addClass("hide");    
+  picture.$menu.click(function(){
+    if(picture.$menu_list.hasClass("hide") === false){
+      picture.$menu_list.addClass("hide");    
     }else{
-      about.$menu_list.removeClass("hide");
+      picture.$menu_list.removeClass("hide");
     }
   });
   
-}(this.about));
+}(this.picture));
 //Kohei Shingai

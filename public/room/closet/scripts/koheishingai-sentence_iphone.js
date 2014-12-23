@@ -1,43 +1,53 @@
-this.about = this.about || {};
-(function(about) {
+this.sentence = this.about || {};
+(function(sentence) {
   'Use Strict'
   
-  about.width = window.innerWidth;
-  about.height = window.innerHeight;  
+  sentence.width = window.innerWidth;
+  sentence.height = window.innerHeight;  
+  sentence.id = $('body').attr("data");
   
-  about.$content = $('body.about .content');
-  about.$menu = $('body.about .search_w .menu');
-  about.$menu_list = $('body.about .content .menu-list');
+  sentence.$content = $('.content');
+  sentence.$menu = $('.search_w .menu');
+  sentence.$menu_list = $('.content .menu-list');
     
-  about.sizeContent = function(w, h){
-    about.$content.css("height", h - 100);
+  sentence.sizeContent = function(w, h){
+    sentence.$content.css("height", h - 100);
   };
   
-  about.init = function(){
-    about.sizeContent(about.width, about.height);
+  sentence.dataCheck = function(){
+    if(sentence.id === "404"){
+      $('body').addClass("empty");
+    }else{
+      $('body').removeClass("empty");
+    }
+  };
+  
+  sentence.init = function(){
+    sentence.sizeContent(sentence.width, sentence.height);
     room.getObject();
+    sentence.dataCheck();
   }
   
-  about.init();
+  sentence.init();
   
   $(window).resize(function() {
-    about.width = window.innerWidth;
-    about.height = window.innerHeight;
-    if (about.timer !== false) {
-      clearTimeout(about.timer)
+    sentence.width = window.innerWidth;
+    sentence.height = window.innerHeight;
+    if (sentence.timer !== false) {
+      clearTimeout(sentence.timer)
     }
-    about.timer = setTimeout(function() {
-      about.sizeContent(about.width, about.height);
+    sentence.timer = setTimeout(function() {
+      sentence.sizeContent(sentence.width, sentence.height);
     }, 100)
   });
   
-  about.$menu.click(function(){
-    if(about.$menu_list.hasClass("hide") === false){
-      about.$menu_list.addClass("hide");    
+  sentence.$menu.click(function(){
+    if(sentence.$menu_list.hasClass("hide") === false){
+      sentence.$menu_list.addClass("hide");    
     }else{
-      about.$menu_list.removeClass("hide");
+      sentence.$menu_list.removeClass("hide");
     }
   });
   
-}(this.about));
+}(this.sentence));
 //Kohei Shingai
