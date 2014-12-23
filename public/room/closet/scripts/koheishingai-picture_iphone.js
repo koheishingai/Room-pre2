@@ -28,15 +28,25 @@ this.picture = this.picture || {};
           $(".picture-title").text(gp.list["title-en"].split("_").join(" "));
         }
         picture.$picture_out.attr("src", gp.list["url"]);
-        gp.outHeight = 0 - (parseInt(picture.$picture_out.css("height"))/2 - 50);
-        if(window.innerWidth < 1170){
-          gp.outWidth = 0 - (parseInt(picture.$picture_out.css("width"))/2);
-        }else{
-          gp.outWidth = 0 - (parseInt(picture.$picture_out.css("width"))/2 - 130);
+        gp.setPictureOut = function(){
+          gp.outHeight = parseInt($('#picture-out').css("height"))/2;
+          gp.outHeight = gp.outHeight - 50;
+          gp.outHeight = 0 - gp.outHeight;
+          if(window.innerWidth < 1170){
+            gp.outWidth = parseInt($('#picture-out').css("width"))/2;
+            gp.outWidth = gp.outWidth;
+            gp.outWidth = 0 - gp.outWidth;
+          }else{
+            gp.outWidth = parseInt($('#picture-out').css("width"))/2;
+            gp.outWidth = gp.outWidth - 130;
+            gp.outWidth = 0 - gp.outWidth;
+          }
         }
+        gp.setPictureOut();
         setTimeout(function(){
-          console.log(gp.outHeight);
-          console.log(gp.outWidth);
+          if(gp.outHeight > 0){
+            gp.setPictureOut();
+          }
           picture.$picture_out.css("margin-top", gp.outHeight);
           picture.$picture_out.css("margin-left", gp.outWidth);
           picture.$picture_out.fadeIn().css("display", "block");
