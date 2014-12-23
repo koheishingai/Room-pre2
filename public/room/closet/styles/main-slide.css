@@ -2,6 +2,7 @@
 background: rgba(255, 255, 255, 0.41);
 width: 100%;
 height: 100%;
+overflow: hidden;
 }
 
 body.about .main-slide .nav{
@@ -27,4 +28,95 @@ height: 100%;
 background: none;
 border: 1px solid rgb(155, 155, 155);
 border-radius: 50%;
+}
+
+body.about .main-slide .slide{
+  width: 100%;
+  height: 100%;
+}
+
+body.about .main-slide .slide h1 {
+font-size: 92px;
+position: absolute;
+bottom: -30px;
+font-weight: 100;
+color: rgba(0, 0, 0, 0.34);
+left: 240px;
+cursor: default;
+transition: left 0.2s ease-in-out, margin-left 0.2s ease-in-out, bottom 0.2s ease-in-out;
+}
+
+body.about .main-slide .slide .view {
+width: 180px;
+height: 82px;
+bottom: 3px;
+right: 3px;
+font-family: inherit;
+text-align: center;
+font-weight: 100;
+color: #A1A1A1;
+background: rgba(232, 232, 232, 1);
+line-height: 85px;
+font-size: 25px;
+border: none;
+box-shadow: none;
+position: absolute;
+transition: left 0.2s ease-in-out, margin-left 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+cursor: pointer;
+padding-right: 56px;
+padding-left: 10px;
+}
+body.about .main-slide .slide .view:hover {
+color: #fff;
+background: #9E9E9E;
+}
+body.no-touch.about .main-slide .slide .view:hover {
+background: rgba(232, 232, 232, 1);
+color: #A1A1A1;
+}
+body.about .image-all{
+width: 100%;
+height: calc(100% - 86px);
+background-size: cover;
+}
+
+@media (max-width:1170px){
+body.about .main-slide .slide h1 {
+left: 0px;
+}
+}
+
+@media (max-width: 580px){
+body.about .main-slide .slide h1 {
+bottom: 16px;
+}
+body.about .image-all {
+width: 100%;
+height: calc(100%);
+background-size: cover !important;
+}
+body.about .main-slide .slide .view {
+width: 180px;
+height: 48px;
+left: 7px;
+top: 50%;
+font-family: inherit;
+text-align: center;
+font-weight: 100;
+color: rgba(0, 0, 0, 0.11);
+background: rgba(0, 0, 0, 0.34);
+line-height: 48px;
+font-size: 25px;
+box-shadow: none;
+padding: 0px;
+cursor: pointer;
+}
+body.about .main-slide .slide .view:hover {
+background: rgba(0, 0, 0, 0.44);
+color: rgba(0, 0, 0, 0.21);
+}
+body.no-touch.about .main-slide .slide .view:hover {
+background: rgba(0, 0, 0, 0.21);
+color: rgba(0, 0, 0, 0.11);
+}
 }
