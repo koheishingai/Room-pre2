@@ -94,6 +94,7 @@ body.about .image-all {
 width: 100%;
 height: calc(100%);
 background-size: cover !important;
+opacity: 0.18;
 }
 body.about .main-slide .slide .view {
 width: 180px;
