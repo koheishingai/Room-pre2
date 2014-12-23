@@ -78,15 +78,38 @@ body.about .image-all{
 width: 100%;
 height: calc(100% - 86px);
 background-size: cover;
+cursor: pointer;
 }
+body.about .picture-in {
+width: 100%;
+height: 100%;
+cursor: pointer;
+background: rgba(255, 255, 255, 0.55);
+opacity: 0;
+transition: opacity 0.06s ease;
+}
+body.about .image-all:hover .picture-in{
+  opacity: 1;
+}
+body.no-touch.about .image-all:hover .picture-in{
+   opacity: 0;
+}
+
 
 @media (max-width:1170px){
 body.about .main-slide .slide h1 {
 left: 0px;
 }
+
 }
 
 @media (max-width: 580px){
+body.about .image-all .picture-in{
+  cursor: default;
+}
+body.about .image-all:hover .picture-in{
+  opacity: 0;
+}
 body.about .main-slide .slide h1 {
 bottom: 16px;
 }
