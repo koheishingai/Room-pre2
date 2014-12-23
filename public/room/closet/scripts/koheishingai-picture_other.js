@@ -35,6 +35,8 @@ this.picture = this.picture || {};
           gp.outWidth = 0 - (parseInt(picture.$picture_out.css("width"))/2 - 130);
         }
         setTimeout(function(){
+          console.log(gp.maxHeight);
+          console.log(gp.maxWidth);
           console.log(gp.outHeight);
           console.log(gp.outWidth);
           picture.$picture_out.css("margin-top", gp.outHeight);
