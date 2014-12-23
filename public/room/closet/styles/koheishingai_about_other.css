@@ -45,6 +45,8 @@ body.about .side-nav.white-nav li a {
 color: #D3D3D3;
 border-color: #eee;
 }
+
+
 body.about .side-nav .icon {
 display: block;
 position: absolute;
@@ -224,6 +226,11 @@ cursor: default !important;
 body.about .side-nav.white-nav li a:hover {
 background: rgba(0,0,0,.05);
 color: #fff;
+}
+body.about .side-nav.white-nav li a.on{
+background: rgba(0,0,0,.05);
+color: #fff;
+cursor: default;
 }
 body.about .side-nav.white-nav li .clear {
 background: none !important;

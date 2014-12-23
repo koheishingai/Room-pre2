@@ -12,6 +12,7 @@ position: fixed;
 right: 3px;
 top: 50%;
 margin-top: -30px;
+z-index:10;
 }
 
 body.about .main-slide .nav .dot {
@@ -28,11 +29,52 @@ height: 100%;
 background: none;
 border: 1px solid rgb(155, 155, 155);
 border-radius: 50%;
+cursor: pointer;
+transition: background 0.2s ease-in-out;
+}
+
+body.about .main-slide.n0 .nav .dot .in.n0{
+  background: rgb(155, 155, 155);
+  cursor: default;
+}
+
+body.about .main-slide.n1 .nav .dot .in.n1{
+  background: rgb(155, 155, 155);
+  cursor: default;
+}
+
+body.about .main-slide.n2 .nav .dot .in.n2{
+  background: rgb(155, 155, 155);
+  cursor: default;
+}
+
+body.about .main-slide.n3 .nav .dot .in.n3{
+  background: rgb(155, 155, 155);
+  cursor: default;
 }
 
 body.about .main-slide .slide{
   width: 100%;
   height: 100%;
+  background: #fff;
+  transition: transform 0.2s ease-in-out;
+  transform: translateY(100%);
+}
+
+body.about .main-slide.n0 .slide{
+  transform: translateY(0) !important;
+}
+
+body.about .main-slide.n1 .slide{
+  transform: translateY(-100%) !important;
+}
+
+body.about .main-slide.n2 .slide{
+  transform: translateY(-200%) !important;
+}
+
+body.about .main-slide.n3 .slide{
+  transform: translateY(-300%) !important;
 }
 
 body.about .main-slide .slide h1 {
@@ -41,7 +83,6 @@ position: absolute;
 bottom: -30px;
 font-weight: 100;
 color: rgba(0, 0, 0, 0.34);
-left: 240px;
 cursor: default;
 transition: left 0.2s ease-in-out, margin-left 0.2s ease-in-out, bottom 0.2s ease-in-out;
 }
@@ -74,12 +115,35 @@ body.no-touch.about .main-slide .slide .view:hover {
 background: rgba(232, 232, 232, 1);
 color: #A1A1A1;
 }
-body.about .image-all{
+body.about .img{
 width: 100%;
 height: calc(100% - 86px);
-background-size: cover;
 cursor: pointer;
 }
+body.about .img-all{
+height: calc(100% - 86px);
+}
+body.about .image-v2 {
+height: calc(50% - 86px);
+}
+body.about .image-left{
+  width: 50%;
+  float: left;
+}
+body.about .image-right{
+  width: 50%;
+  float: right;
+}
+body.about .image-h4{
+width: 25%;
+float: left;
+}
+body.about .image-h2{
+width: 50%;
+float: left;
+}
+
+
 body.about .picture-in {
 width: 100%;
 height: 100%;
@@ -88,11 +152,43 @@ background: rgba(255, 255, 255, 0.55);
 opacity: 0;
 transition: opacity 0.06s ease;
 }
+body.about .img-all .picture-in{
+height: calc(100% - 86px);
+}
+body.about .image-v2 .picture-in{
+height: 100%;
+}
 
-body.about .image-all:hover .picture-in, body.about .image-all:hover .picture-in .icon{
+/* body.about .image-v2 .picture-in .icon {
+margin-top: -252px;
+}
+body.about .image-left .picture-in .icon {
+margin-top: 30px;
+margin-left: -338px;
+}
+body.about .image-right .picture-in .icon {
+margin-top: 30px;
+margin-left: 236px;
+} */
+
+/* body.about .image-h4.n0 .picture-in .icon{
+  margin-left: -517px;
+}
+body.about .image-h4.n1 .picture-in .icon{
+margin-left: -204px;
+}
+body.about .image-h4.n2 .picture-in .icon{
+margin-left: 108px;
+}
+body.about .image-h4.n3 .picture-in .icon{
+margin-left: 427px;
+} */
+
+
+body.about .img:hover .picture-in, body.about .img:hover .picture-in .icon{
   opacity: 1;
 }
-body.no-touch.about .image-all:hover .picture-in{
+body.no-touch.about .img:hover .picture-in{
    opacity: 0;
 }
 body.about .picture-in .icon {
@@ -101,14 +197,20 @@ height: 100px;
 top: 50%;
 left: 50%;
 position: absolute;
-margin-top: -40px;
-margin-left: 70px;
+margin-top: -90px;
+margin-left: -50px;
 background: url(../../../../images/images.svg);
-background-size: cover;
+background-size: cover !important;
 background-position: 50%;
 opacity: 0;
 transition: opacity 0.06s ease;
 }
+
+body.about .img.cover-all {
+  background-size: cover !important;
+}
+
+
 @media (max-width:1170px){
 body.about .main-slide .slide h1 {
 left: 0px;
@@ -119,21 +221,38 @@ margin-left: -50px;
 }
 
 @media (max-width: 580px){
-body.about .image-all .picture-in{
+body.about .img .picture-in{
   cursor: default;
 }
-body.about .image-all:hover .picture-in{
+body.about .img:hover .picture-in{
   opacity: 0;
 }
 body.about .main-slide .slide h1 {
 bottom: 16px;
 }
-body.about .image-all {
+body.about .img {
 width: 100%;
-height: calc(100%);
-background-size: cover !important;
+height: 100%;
 opacity: 0.18;
 }
+body.about .img.cover-narrow{
+background-size: cover !important;
+}
+
+body.about .image-all {
+  height: 100%;
+}
+body.about .image-v2 {
+  height: 33.33333% !important;
+}
+body.about .image-left {
+  height: 33.33333% !important;
+}
+body.about .image-right {
+  height: 33.33333% !important;
+}
+
+
 body.about .main-slide .slide .view {
 width: 180px;
 height: 48px;
@@ -149,6 +268,7 @@ font-size: 25px;
 box-shadow: none;
 padding: 0px;
 cursor: pointer;
+margin-top: -60px;
 z-index: 9;
 }
 body.about .main-slide .slide .view:hover {
