@@ -57,12 +57,13 @@ body.about .main-slide .slide{
   width: 100%;
   height: 100%;
   background: #fff;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transform: translateY(100%);
 }
 
 body.about .main-slide.n0 .slide{
   transform: translateY(0) !important;
+  opacity: 1;
 }
 
 body.about .main-slide.n1 .slide{
@@ -76,6 +77,28 @@ body.about .main-slide.n2 .slide{
 body.about .main-slide.n3 .slide{
   transform: translateY(-300%) !important;
 }
+
+body.mobile.about .main-slide .slide{
+  opacity: 0;
+}
+
+body.mobile.about .main-slide.n0 .slide.n0{
+  opacity: 1;
+}
+
+body.mobile.about .main-slide.n1 .slide.n1{
+  opacity: 1;
+}
+
+body.mobile.about .main-slide.n2 .slide.n2{
+  opacity: 1;
+}
+
+body.mobile.about .main-slide.n3 .slide.n3{
+  opacity: 1;
+}
+
+
 
 body.about .main-slide .slide h1 {
 font-size: 92px;

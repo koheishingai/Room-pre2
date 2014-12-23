@@ -48,6 +48,7 @@
     object.$main_slide.removeClass("n"+object.now).addClass("n"+object.next);
     object.now = object.next;
     object.setA();
+    about.$menu_list.addClass("hide"); 
   };
   
   });
