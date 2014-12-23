@@ -80,22 +80,27 @@ body.about .main-slide.n3 .slide{
 
 body.mobile.about .main-slide .slide{
   opacity: 0;
+  display: none;
 }
 
 body.mobile.about .main-slide.n0 .slide.n0{
   opacity: 1;
+  display: block;
 }
 
 body.mobile.about .main-slide.n1 .slide.n1{
   opacity: 1;
+  display: block;
 }
 
 body.mobile.about .main-slide.n2 .slide.n2{
   opacity: 1;
+  display: block;
 }
 
 body.mobile.about .main-slide.n3 .slide.n3{
   opacity: 1;
+  display: block;
 }
 
 
