@@ -6,6 +6,7 @@ index.space_path = './public/room/space/';
 index.layout_path = './public/room/layout/';
 index.object_path = './public/room/closet/object/';
 index.data_path = './public/room/closet/data/article/list/';
+index.picture_path = './public/room/closet/data/picture/';
 
 index.addScript = function(f, o) {
     var out = o + '<script src="./room/closet/scripts/' + f + '.js"></script>'
@@ -47,6 +48,15 @@ exports.getSpace = function(req, res) {
     fs.readFile(index.space_path + gs.name + "/title.json", 'utf8', function(err, val) {
         gs.out = JSON.parse(val);
         res.send(gs.out[gs.lang]);
+    });
+};
+
+exports.getPicture = function(req, res) {
+    var gp = {};
+    gp.list = req.url.split("?");
+    gp.id = gp.list[1].split("&_=")[0];
+    fs.readFile(index.picture_path + gp.id + "/info.json", 'utf8', function(err, val) {
+        res.send(val);
     });
 };
 

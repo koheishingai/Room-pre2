@@ -30,6 +30,7 @@ app.get('/getObject', routes.getObject);
 app.get('/getData', routes.getData);
 app.get('/getLayout', routes.getLayout);
 app.get('/getRoom', routes.getRoom);
+app.get('/getPicture', routes.getPicture);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function() {
