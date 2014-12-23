@@ -945,6 +945,7 @@ color: #fff;
 @media (max-width: 580px){
 body.about .content .menu-list{
 height: calc(100% - 149px);
+background: rgba(255, 255, 255, 1) !important;
 }
 body.about .content {
 padding: 0px;
