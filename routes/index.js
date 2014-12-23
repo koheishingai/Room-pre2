@@ -21,6 +21,14 @@ exports.index = function(req, res) {
     res.render('index');
 };
 
+exports.picture = function(req, res) {
+    res.render('picture');
+};
+
+exports.sentence = function(req, res) {
+    res.render('sentence');
+};
+
 exports.getSpace = function(req, res) {
     var gs = {};
     gs.list = req.url.split("?");

@@ -23,6 +23,8 @@ app.configure('development', function() {
 });
 
 app.get('/', routes.index);
+app.get('/picture', routes.picture);
+app.get('/sentence', routes.sentence);
 app.get('/getSpace', routes.getSpace);
 app.get('/getObject', routes.getObject);
 app.get('/getData', routes.getData);

@@ -15,7 +15,7 @@ this.about = this.about || {};
   
   about.init = function(){
     about.sizeContent(about.width, about.height);
-    koheishingai.getObject();
+    room.getObject();
   }
   
   about.init();

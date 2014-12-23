@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html itemscope="" itemtype="http://schema.org/WebPage" name="koheishingai">
+<html itemscope="" itemtype="http://schema.org/WebPage" name="koheishingai-sentence">
 
 <head>
     <meta charset="utf-8">
@@ -65,7 +65,7 @@
           room.ajax=function(u,a,t,ar){var aj={};$.ajax({url:"/"+u+"?"+a+"?"+ar,cache:false,success:function(data){aj.result=data;$('object-n'+t).fadeOut();$('[object-id="'+t+'"]').html(aj.result)}})};
           room.getObject=function(){var go={};go.cnt=0;$('[object]').each(function(){$(this).html(room.loading_start+go.cnt+room.loading_end);$(this).attr("object-id",go.cnt);if($(this).attr("data")==="default"){go.data_name=room.root_name;go.data_lang=room.getLang();if(room.position===undefined||room.position===""){go.data_position="main"}else{go.data_position=room.position}go.data=go.data_name+"_"+go.data_position+"_"+go.data_lang}else{go.data=""}go.args=$(this).attr("args");if(room.getLang()==="ja"){room.ajax("getObject",$(this).attr("object")+"_ja",go.cnt,go.data)}else{room.ajax("getObject",$(this).attr("object")+"_en",go.cnt,go.data)}go.cnt++})};
           room.noTouch=function(){if(bradev.device!=="other"){room.$body.addClass("no-touch").addClass("mobile")}};
-          room.getRoom=function(f){if(bradev.device==="iphone"){var d="iphone"}else{var d="other"}if(room.now===undefined){room.now=""}if(room.now!==""){$('.button.side.back').fadeIn()}else{location.hash="/"}$.ajax({url:"/getRoom?"+f+room.now+"_"+d+"?"+room.getLang(),cache:false,success:function(data){room.$room.html(data);$('body').removeClass("trn");$('.screen.loader').fadeOut()}})};
+          room.getRoom=function(f){if(bradev.device==="iphone"){var d="iphone"}else{var d="other"}if(room.now===undefined){room.now=""}if(room.now!==""){$('.button.side.back').fadeIn()}else{/* location.hash="/" */}$.ajax({url:"/getRoom?"+f+room.now+"_"+d+"?"+room.getLang(),cache:false,success:function(data){room.$room.html(data);$('body').removeClass("trn");$('.screen.loader').fadeOut()}})};
           room.getLayout=function(f,id){if(bradev.device==="iphone"){var d="iphone"}else{var d="other"}$.ajax({url:"/getLayout?"+f+"_"+d+"?"+room.getLang()+"?"+id,cache:false,success:function(data){room.$layout.html(data);$('.screen.layer.layout .loader').fadeOut()}})};
           room.createId=function(num){var str='';var mojishu='ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz0123456789';var len=mojishu.length;for(var i=0;i<num;i++){var rand=parseInt(Math.random()*len);str+=mojishu.charAt(rand)}return str;localStorage.setItem("ID",str)}
           room.refreshExplain=function(){if(room.getLang()!=="ja"){room.$layout.html("")}else{room.$layout.html("")}room.$layout.append('<div class="screen loader"><img src="./images/load.svg"></div>')};
@@ -77,7 +77,7 @@
           room.init=function(){room.noTouch();room.setContent();room.hideSafari();room.getSpace();room.getRoom(room.root_name)};
           room.init();
           room.close=function(){if(room.mode==="view"){if(bradev.browser!=="safari"&&bradev.device==="other"){room.$body.removeClass("view2")}else{room.$body.removeClass("view").removeClass("view2")}setTimeout(function(){room.$body.removeClass("view");room.mode="main"},280)}else if(room.mode==="layout"){$('.screen.layer.layout .loader').fadeOut();room.$body.removeClass("layout2");setTimeout(function(){room.refreshExplain();room.$body.removeClass("layout");room.mode="view"},280)}};
-          room.back = function(){$('.button.side.back').fadeOut();room.now = "";$("body").addClass("trn");setTimeout(function(){$("body").removeClass(room.position);$('.screen.loader').fadeIn(function(){setTimeout(function(){room.getRoom(room.root_name);location.hash="/"},280)})},280);};
+          room.back = function(){$('.button.side.back').fadeOut();room.now = "";$("body").addClass("trn");setTimeout(function(){$("body").removeClass(room.position);$('.screen.loader').fadeIn(function(){setTimeout(function(){room.getRoom(room.root_name);/* location.hash="/" */},280)})},280);};
           room.view=function(){room.mode="view";if(bradev.browser!=="safari"&&bradev.device==="other"){room.refreshExplain();room.$body.addClass("view")}else{room.$body.addClass("view")}setTimeout(function(){room.$body.addClass("view2")},280)};
           room.layout=function(f){room.mode="layout";$('.screen.layer.layout .loader').fadeIn();room.getLayout(f,room.createId(7));room.$body.addClass("layout");setTimeout(function(){room.$body.addClass("layout2")},280)};
           room.ios=function(i,m){if(i!=='cooking'){$('.ui-ios-overlay').removeClass('svg');$('.ui-ios-overlay img').attr("src","./images/ios_"+i+".png")}else{$('.ui-ios-overlay').addClass('svg');$('.ui-ios-overlay img').attr("src","./images/ios_"+i+".svg")}$('.ui-ios-overlay .title').text(m);$('.ui-ios-overlay').fadeIn(function(){setTimeout(function(){$('.ui-ios-overlay').fadeOut()},330)})}

@@ -55,7 +55,7 @@ this.koheishingai = this.koheishingai || {};
   };
 
   koheishingai.init = function() {
-    koheishingai.getObject();
+    room.getObject();
   }
 
   koheishingai.init();
