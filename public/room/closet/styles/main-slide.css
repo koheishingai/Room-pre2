@@ -88,19 +88,34 @@ background: rgba(255, 255, 255, 0.55);
 opacity: 0;
 transition: opacity 0.06s ease;
 }
-body.about .image-all:hover .picture-in{
+
+body.about .image-all:hover .picture-in, body.about .image-all:hover .picture-in .icon{
   opacity: 1;
 }
 body.no-touch.about .image-all:hover .picture-in{
    opacity: 0;
 }
-
-
+body.about .picture-in .icon {
+width: 100px;
+height: 100px;
+top: 50%;
+left: 50%;
+position: absolute;
+margin-top: -40px;
+margin-left: 70px;
+background: url(../../../../images/images.svg);
+background-size: cover;
+background-position: 50%;
+opacity: 0;
+transition: opacity 0.06s ease;
+}
 @media (max-width:1170px){
 body.about .main-slide .slide h1 {
 left: 0px;
 }
-
+body.about .picture-in .icon{
+margin-left: -50px;
+}
 }
 
 @media (max-width: 580px){
@@ -143,5 +158,8 @@ background: rgba(138, 138, 138, 1);
 body.no-touch.about .main-slide .slide .view:hover {
 color: rgba(0, 0, 0, 0.41);
 background: rgba(158, 158, 158, 1);
+}
+body.about .picture-in .icon{
+display:none;
 }
 }
