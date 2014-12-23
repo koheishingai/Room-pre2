@@ -53,5 +53,18 @@
   
   });
   
+        $('.view').click(function() {
+ 
+                if (room.getLang() === "ja") {
+                    room.ios("cooking", "準備中です");
+
+                } else {
+                    room.ios("cooking", "Now Preparing");
+                    
+                }
+
+
+    });
+  
   
 })();

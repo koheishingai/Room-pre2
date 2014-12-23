@@ -39,5 +39,10 @@ this.about = this.about || {};
     }
   });
   
+    $('.view').click(function() {
+      alert("test");    
+    });
+  
+  
 }(this.about));
 //Kohei Shingai
