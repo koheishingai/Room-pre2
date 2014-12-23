@@ -915,6 +915,7 @@ display: block;
 transition: opacity 0.2s ease-in-out;
 padding-top: 1em;
 background: rgba(255, 255, 255, 1) !important;
+z-index: 10;
 }
 body.about .content .menu-list li a {
 display: block;
@@ -945,6 +946,7 @@ color: #fff;
 @media (max-width: 580px){
 body.about .content .menu-list{
 height: calc(100% - 149px);
+background: rgba(255, 255, 255, 1) !important;
 }
 body.about .content {
 padding: 0px;

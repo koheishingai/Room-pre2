@@ -915,6 +915,7 @@ display: block;
 transition: opacity 0.2s ease-in-out;
 padding-top: 1em;
 background: rgba(255, 255, 255, 1) !important;
+z-index: 10;
 }
 body.about .content .menu-list li a {
 display: block;
