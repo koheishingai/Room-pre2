@@ -221,7 +221,10 @@ body.about .side-nav.white-nav li .select {
 background: #fafafa !important;
 cursor: default !important;
 }
-
+body.about .side-nav.white-nav li a:hover {
+background: rgba(0,0,0,.05);
+color: #fff;
+}
 body.about .side-nav.white-nav li .clear {
 background: none !important;
 cursor: default;
@@ -876,6 +879,7 @@ body.about .foot-load.on section div{
 -moz-transform: translateX(0%);
 transform: translateX(0%);
 }
+
 body.about .content .menu-list.hide {
   opacity: 0 !important;
   display: none !important;
@@ -910,6 +914,7 @@ opacity: 1;
 display: block;
 transition: opacity 0.2s ease-in-out;
 padding-top: 1em;
+background: rgba(255, 255, 255, 1) !important;
 }
 body.about .content .menu-list li a {
 display: block;
@@ -932,10 +937,17 @@ body.about .content .menu-list li a {
 color: #D3D3D3;
 border-color: #eee;
 }
-
+body.about .content .menu-list li a:hover {
+background: rgba(0,0,0,.05);
+color: #fff;
+}
 }
 @media (max-width: 580px){
 body.about .content .menu-list{
 height: calc(100% - 149px);
+}
+body.about .content {
+padding: 0px;
+padding-top: 3px;
 }
 }
