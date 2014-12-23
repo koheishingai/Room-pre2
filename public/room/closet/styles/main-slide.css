@@ -104,20 +104,21 @@ top: 50%;
 font-family: inherit;
 text-align: center;
 font-weight: 100;
-color: rgba(0, 0, 0, 0.11);
-background: rgba(0, 0, 0, 0.34);
+color: rgba(0, 0, 0, 0.41);
+background: rgba(158, 158, 158, 1);
 line-height: 48px;
 font-size: 25px;
 box-shadow: none;
 padding: 0px;
 cursor: pointer;
+z-index: 9;
 }
 body.about .main-slide .slide .view:hover {
-background: rgba(0, 0, 0, 0.44);
-color: rgba(0, 0, 0, 0.21);
+color: rgba(0, 0, 0, 0.63);
+background: rgba(138, 138, 138, 1);
 }
 body.no-touch.about .main-slide .slide .view:hover {
-background: rgba(0, 0, 0, 0.34);
-color: rgba(0, 0, 0, 0.11);
+color: rgba(0, 0, 0, 0.41);
+background: rgba(158, 158, 158, 1);
 }
 }
