@@ -364,8 +364,8 @@ margin-bottom: -26px;
 }
 
 body.mobile .article-panel-type01 .panel .img.top .in .right-bottom{
-  margin-top: -7px;
-  margin-bottom: -26px;
+  margin-top: -7px !important;
+  margin-bottom: -26px !important;
 }
 
 

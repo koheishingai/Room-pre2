@@ -5,7 +5,6 @@ body.about a {
 border: none;
 }
 body.about a, body.about a.link-block .link {
-color: #218bc3;
 text-decoration: none;
 }
 body.about a:hover, body.about a.link-block .link:hover {
