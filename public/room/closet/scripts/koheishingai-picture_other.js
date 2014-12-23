@@ -34,9 +34,11 @@ this.picture = this.picture || {};
         }else{
           gp.outWidth = 0 - (parseInt(picture.$picture_out.css("width"))/2 - 130);
         }
-        picture.$picture_out.css("margin-top", gp.outHeight);
-        picture.$picture_out.css("margin-left", gp.outWidth);
-        picture.$picture_out.fadeIn().css("display", "block");
+        setTimeout(function(){
+          picture.$picture_out.css("margin-top", gp.outHeight);
+          picture.$picture_out.css("margin-left", gp.outWidth);
+          picture.$picture_out.fadeIn().css("display", "block");
+        }, 1350);
       }
     });
   }
